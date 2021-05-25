@@ -14,6 +14,7 @@ a[href*="./homepage.html"]{
     position:fixed;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
     background-color: #f4511e;
     border: none;
     color: white;
