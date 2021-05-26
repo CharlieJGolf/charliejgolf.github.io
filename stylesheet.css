@@ -51,8 +51,8 @@ does it need font styles? no*/
 
 #banner .content img[src*="mamiko-banner"]{
     position: relative;
-    width: 54%;
-    height: 25%;
+    width: 24%;
+    height: 12%;
     object-fit: cover;
     opacity: 85%;
     border: 1px dotted gray;
