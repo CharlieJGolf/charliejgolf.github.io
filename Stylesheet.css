@@ -1,0 +1,90 @@
+/*index*/
+
+.container{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+img[src*="Mamiko-CoverPage"]{
+    width: 100%;
+    height: auto;
+    opacity: 0.85;
+}
+
+a[href*="./homepage.html"]{
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f4511e;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    z-index:1;
+    font-size: 24px;
+    font-family: Verdana;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a[href*="./homepage.html"]:hover{
+    opacity:1;
+}
+
+/*homepage*/
+
+.page-header-name{
+    position: relative;
+    top: 20%;
+    left: 20%;
+}
+
+img[src*="mamiko-erie"]{
+    position: fixed;
+    width: 110px;
+    height: 110px;
+    top: 5%;
+    left: 5%;
+    z-index: -1;
+}
+
+
+
+.page-header-name{
+    position: fixed;
+    top: 15%;
+    left: 15%;
+    font-family: Veranda;
+    font-size: 32px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 600;
+    line-height: 26.4px; 
+}
+
+.bio-header{
+    font-family: Veranda;
+    font-size: 24pt;
+}
+
+
+
+
+
+
+
+
+/*________      .__.                 
+ /  _____/______|__| _____   _____  
+/   \  __\_  __ \  |/     \ /     \ 
+\    \_\  \  | \/  |  Y Y  \  Y Y  \
+ \______  /__|  |__|__|_|  /__|_|  /
+        \/               \/      \/
+*/
+
