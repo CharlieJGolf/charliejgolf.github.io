@@ -39,7 +39,7 @@ a[href*="./homepage.html"]:hover{
 
 /*homepage*/
 
-.page-header-name{
+.page-header{
     position: relative;
     top: 20%;
     left: 20%;
@@ -53,8 +53,6 @@ img[src*="mamiko-erie"]{
     left: 5%;
     z-index: -1;
 }
-
-
 
 .page-header-name{
     position: fixed;
