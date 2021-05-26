@@ -39,6 +39,12 @@ a[href*="./homepage.html"]:hover{
 
 /*homepage*/
 
+/*these banner container styles, will be applicable for
+homepage, FilmWorks and SocialMedia*/
+.banner-container{
+
+}
+
 img[src*="mamiko-erie"]{
     position: fixed;
     width: 110px;
