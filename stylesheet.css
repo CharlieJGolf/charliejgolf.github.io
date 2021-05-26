@@ -14,7 +14,7 @@ img[src*="Mamiko-CoverPage"]{
 
 a[href*="./homepage.html"]{
     position:fixed;
-    top: 50%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #f4511e;
@@ -44,12 +44,15 @@ homepage, filmWorks and socialmedia (aka all pages accept index
 does it need font styles? no*/
 
 #banner{
-    background-image: url(./mamiko-erie.jpg);
-    background-size: cover;
-    background-position: center center;
     width: 100%;
     height: 20%;
-    opacity: 80%;
+}
+
+#banner .content img[src*="mamiko-banner"]{
+    position: relative;
+    width: 54%;
+    height: 25%;
+    opacity: 85%;
 }
 
 #banner .content h1{
@@ -59,14 +62,22 @@ does it need font styles? no*/
     width: 50%;
     margin: 0 auto;
     padding: 0;
-    font-family: Veranda;
+    font-family:  Verdana, Geneva, Tahoma, sans-serif;
     font-size: 32px;
     font-weight: 600;
     line-height: 26.4px; 
 }
 
+#banner content h2{
+    position: relative;
+    top: 10%;
+    right: 15%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 2px solid rgb(192, 72, 42)
+}
+
 .bio-header{
-    font-family: Veranda;
+    font-family:  Verdana, Geneva, Tahoma, sans-serif;
     font-size: 24pt;
 }
 
