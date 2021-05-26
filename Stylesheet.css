@@ -42,10 +42,9 @@ a[href*="./homepage.html"]:hover{
 /*these "banner container" styles, will be applicable for
 homepage, filmWorks and socialmedia (aka all pages accept index
 does it need font styles? no*/
-
+/*
 .banner{
     width: 100%;
-    /*position: none needed for banner*/
     padding: 20px;
     background-color: bisque;
 }
@@ -77,6 +76,7 @@ img[src*="mamiko-erie"]{
     font-family: Veranda;
     font-size: 24pt;
 }
+*/
 
 
 
