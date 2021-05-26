@@ -73,6 +73,7 @@ does it need font styles? no*/
     font-weight: 600;
     line-height: 26.4px; 
     border:  1px dotted gray;
+    display: inline-block;
 }
 
 #banner content h2{
