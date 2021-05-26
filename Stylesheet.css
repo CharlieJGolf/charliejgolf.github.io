@@ -43,7 +43,7 @@ a[href*="./homepage.html"]:hover{
 homepage, filmWorks and socialmedia (aka all pages accept index
 does it need font styles? no*/
 
-.banner-container{
+.banner{
     width: 100%;
     /*position: none needed for banner*/
     padding: 20px;
