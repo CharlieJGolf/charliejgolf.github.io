@@ -46,14 +46,14 @@ does it need font styles? no*/
 #banner{
     position: fixed;
     width: 100%;
-    height: 20%;
+    height: 25%;
     border: 1px dotted gray;
 }
 
 #banner .content img[src*="mamiko-banner"]{
     position: absolute;
-    width: 24%;
-    height: 12%;
+    width: 54%;
+    height: 25%;
     object-fit: cover;
     z-index: -1;
     opacity: 85%;
@@ -62,8 +62,8 @@ does it need font styles? no*/
 
 .headername{
     position: absolute;
-    top: 10%;
-    left: 20%;
+    top: 50px;
+    left: 100px;
     width: auto; /*default*/
     z-index: 1;
     margin: 0 auto;
@@ -88,6 +88,8 @@ does it need font styles? no*/
     font-family:  Verdana, Geneva, Tahoma, sans-serif;
     font-size: 24pt;
     border: 1px dotted gray;
+    position: relative;
+    top: 50%;
 }
 
 
