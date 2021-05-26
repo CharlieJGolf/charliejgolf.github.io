@@ -39,25 +39,35 @@ a[href*="./homepage.html"]:hover{
 
 /*homepage*/
 
-/*these banner container styles, will be applicable for
-homepage, FilmWorks and SocialMedia*/
+/*these "banner container" styles, will be applicable for
+homepage, filmWorks and socialmedia (aka all pages accept index
+does it need font styles? no*/
+
 .banner-container{
+    width: 100%;
+    /*position: none needed for banner*/
+    padding: 45px;
 
 }
 
 img[src*="mamiko-erie"]{
-    position: fixed;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    margin: 0;
+    padding: 0;
     width: 110px;
     height: 110px;
-    top: 10%;
     left: 5%;
     z-index: -1;
 }
 
 .page-header-name{
-    position: fixed;
-    top: 10%;
-    left: 15%;
+    position: absolute;
+    top:10%;
+    left: 20%;
+    margin: 0;
+    padding: 0;
     font-family: Veranda;
     font-size: 32px;
     font-weight: 600;
