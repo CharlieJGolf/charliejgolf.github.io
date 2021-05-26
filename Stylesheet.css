@@ -46,8 +46,8 @@ does it need font styles? no*/
 .banner-container{
     width: 100%;
     /*position: none needed for banner*/
-    padding: 45px;
-
+    padding: 20px;
+    background-color: bisque;
 }
 
 img[src*="mamiko-erie"]{
@@ -58,11 +58,10 @@ img[src*="mamiko-erie"]{
     padding: 0;
     width: 110px;
     height: 110px;
-    left: 5%;
     z-index: -1;
 }
 
-.page-header-name{
+.header-name{
     position: absolute;
     top:10%;
     left: 20%;
