@@ -44,7 +44,7 @@ homepage, filmWorks and socialmedia (aka all pages accept index
 does it need font styles? no*/
 
 #banner{
-    background-image: url(./mamiko-erie.jpg)
+    background-image: url(./mamiko-erie.jpg);
     background-size: cover;
     background-position: center center;
     width: 100%;
