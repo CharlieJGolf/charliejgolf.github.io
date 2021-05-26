@@ -50,7 +50,7 @@ does it need font styles? no*/
 }
 
 #banner .content img[src*="mamiko-banner"]{
-    position: relative;
+    position: absolute;
     width: 24%;
     height: 12%;
     object-fit: cover;
@@ -60,7 +60,7 @@ does it need font styles? no*/
 }
 
 .headername{
-    position: relative;
+    position: absolute;
     top: 10%;
     left: 20%;
     width: auto; /*default*/
