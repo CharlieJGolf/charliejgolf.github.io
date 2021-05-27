@@ -51,6 +51,7 @@ does it need font styles? no*/
 
 .header-content-left{
     border: 1px dotted darkred;
+    display: inline-block;
 }
 
 img[src*="mamiko-banner"]{
@@ -78,6 +79,7 @@ img[src*="mamiko-banner"]{
 
 .header-content-right{
     border: 1px dotted darkred;
+    display: inline-block;
 }
 
 /* need to add both site nav links here */
