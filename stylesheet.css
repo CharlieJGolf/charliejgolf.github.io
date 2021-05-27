@@ -43,19 +43,23 @@ a[href*="./homepage.html"]:hover{
 homepage, filmWorks and socialmedia (aka all pages accept index
 does it need font styles? no*/
 
-#banner{
+#header{
     width: 100%;
     height: 25%;
-    border: 1px dotted gray;
+    border: 1px dotted darkred;
 }
 
-#banner .content img[src*="mamiko-banner"]{
+.header-content-left{
+    border: 1px dotted darkred;
+}
+
+img[src*="mamiko-banner"]{
     width: 54%;
     height: 25%;
     object-fit: cover;
     z-index: -1;
     opacity: 85%;
-    border: 1px dotted gray;
+    border: 1px dotted darkred;
     display: inline-block;
 }
 
@@ -68,22 +72,32 @@ does it need font styles? no*/
     font-size: 32px;
     font-weight: 600;
     line-height: 26.4px; 
-    border:  1px dotted gray;
+    border: 1px dotted darkred;
     display: inline-block;
 }
 
-#banner content h2{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    border:  1px dotted gray;
+.header-content-right{
+    border: 1px dotted darkred;
 }
 
-.bio-header{
+/* need to add both site nav links here */
+
+.hp-body{
+    background-color: #444444;
+    border: 1px dotted darkred;
+}
+
+.hp-body-header{
     font-family:  Verdana, Geneva, Tahoma, sans-serif;
     font-size: 24pt;
-    border: 1px dotted gray;
+    border: 1px dotted darkred;
 }
 
-
+.hp-body-content {
+    font-family:  Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16pt;
+    border: 1px dotted darkred;
+}
 
 
 
