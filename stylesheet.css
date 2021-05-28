@@ -162,9 +162,8 @@ a {
 
 .header .mamiko-headshot {
   height: auto;
-  margin-right: 0.5em;
+  margin-right: 1em;
   border: 0.2em solid #DAA9B3;
-  margin-right: 0em;
   box-shadow: 0 0 5em -1em #A4A4A4;
 }
    
