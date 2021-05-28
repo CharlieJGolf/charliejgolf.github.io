@@ -20,7 +20,7 @@ a[href*="./homepage.html"]{
     background-color: #DAA9B3;
     border: none;
     color: white;
-    padding: 16px 32px;
+    padding: 0.2rem;
     text-align: center;
     z-index:1;
     font-size: 24px;
@@ -173,7 +173,7 @@ a {
   color: white;
   letter-spacing: 0.1em;
   border-left: 0em;
-  border-right: oem;
+  border-right: 0em;
   border-top: 0.01em solid #DAA9B3;
   border-bottom: 0.01em solid #DAA9B3;
   padding: 0.1em 0.7em;
