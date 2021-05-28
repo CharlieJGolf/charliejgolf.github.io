@@ -163,7 +163,7 @@ a {
 .header .mamiko-headshot {
   height: auto;
   margin-right: 0.5em;
-  border: 0.02em solid #DAA9B3;
+  border: 0.2em solid #DAA9B3;
   margin-right: 0em;
   box-shadow: 0 0 5em -1em #A4A4A4;
 }
@@ -171,7 +171,7 @@ a {
 .header h1 {
   font-size: 3rem;
   font-weight: normal;
-  color: #DAA9B3;
+  color: white;
   letter-spacing: 0.1em;
   border-left: 0em;
   border-right: oem;
@@ -179,7 +179,10 @@ a {
   border-bottom: 0.01em solid #DAA9B3;
   padding: 0.1em 0.7em;
   margin-left: 0em;
-  box-shadow: 0 0 5em -1em #DAA9B3;
+  box-shadow: 0 0 5em 10em #A77680;
+  background-color: #A77680;
+
+  z-index: -1;
 }
 
 /*I need to define this header height, then define the image seperately*/
