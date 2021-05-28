@@ -46,20 +46,21 @@ does it need font styles? no*/
 /*I should be fine to import that css font sheet if needed..*/
 
 :root {
-  --color: #303848;
+  --color: #41101a;
   --transition-time: 0.5s;
 }
 
 
 * {
   box-sizing: border-box;
+  border: 1px solid lightgray;
 }
 
 body{
   margin: 0;
   min-height: 100vh; /*height: 100vh = 100% of the viewport height. height: 100% = 100% of the parent's element height. The viewport units are relative units, which means that they do not have an objective measurement*/
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #303848;
+  background: #41101a;
 }
 
 
