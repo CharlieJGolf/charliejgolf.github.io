@@ -64,7 +64,7 @@ body{
 
 
 a {
-    color: inherit; /*inherit from what parent.. find out*/
+  color: inherit; /*inherit from what parent.. find out*/
 }
 
 .cards-wrapper {
@@ -151,11 +151,12 @@ a {
   font-size: 3em;
   margin-bottom: 1.2rem;
   margin-left: 1rem;
+  color: white;
 }
 
 .header img[src*="mamiko-headshot"] {
-  max-width: 100%;;
-  height: auto;  /*I'll need to play with this I'm sure.. but em is relative.. I'm pretty sure*/
+  width: 10%;;
+  height: 10%;  /*I'll need to play with this I'm sure.. but em is relative.. I'm pretty sure*/
   margin-right: 0.5em;
 }
 
