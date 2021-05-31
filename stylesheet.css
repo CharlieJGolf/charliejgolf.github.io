@@ -54,7 +54,6 @@ does it need font styles? no*/
 
 * {
   box-sizing: border-box;
-  border: 1px dotted black;
 }
 
 body{
@@ -121,7 +120,7 @@ a {
   transform: scale(0); /*The scale() method increases or decreases the size of an element (according to the parameters given for the width and height).*/
   transform-origin: top left; /*starts at the top left*/
   border-radius: 50%;
-  position: absolute;  /*here goes position again - card position, is relative*/
+  position: relative;  /*here goes position again - card position, is relative*/
   left: -50%;
   top: -50%;
   z-index: -5;
@@ -238,56 +237,48 @@ a {
 
 /*bio:*/
 
+  .biocontainer{
+    position: static;
+  }
+
   #biogradient {
     background: #999955;
-    background-image: linear-gradient(#DAB046 20%, #D73B25 20%, #D73B25 40%, #C71B25 40%, #C71B25 60%, #961A39 60%, #961A39 80%, #601035 80%);
-    margin: 0 auto;
-    margin-top: 100px;
+    background-image: linear-gradient(
+        #F0DBBC 20%,#C2C6AF 20%, #C2C6AF 40%, #8E5D67 40%, #8E5D67 60%, #54747F 60%, #54747F 80%, #B29671 80%);
+    margin: 3rem auto auto 0;
     width: 100%;
     height: 150px;
   }
-  
-  #biogradient:after {
-    content: "";
-    position: absolute;
-    background: #E9E2D0;
-    left: 50%;
-    margin-top: -67.5px;
-    margin-left: -270px;
-    padding-left: 20px;
-    border-radius: 5px;
-    width: 520px;
-    height: 275px;
-    z-index: -1;
-  }
-  
+    
   #biocard {
-    position: absolute;
-    width: 450px;
-    height: 225px;
+    position: relative;
+    width: 40%;
+    top: 25%;
     padding: 25px;
-    padding-top: 0;
-    padding-bottom: 0;
-    left: 50%;
-    top: 67.5px;
-    margin-left: -250px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin: auto;
     background: #E9E2D0;
     box-shadow: -20px 0 35px -25px black, 20px 0 35px -25px black;
-    z-index: 5;
+    border-radius: .5rem;
+    z-index: 1;
   }
 
   #biocard h2 {
-    font-family: courier;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #333;
     margin: 0 auto;
-    padding: 0;
+    padding: 1rem;
     font-size: 15pt;
+    z-index: 3;
   }
   
   #biocard p {
-    font-family: courier;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #555;
     font-size: 13px;
+    padding: 1rem;
+    z-index: 3;
   }
 
 
