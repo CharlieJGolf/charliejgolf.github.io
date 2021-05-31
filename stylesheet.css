@@ -47,7 +47,7 @@ does it need font styles? no*/
 /*I should be fine to import that css font sheet if needed..*/
 
 :root {
-  --color: white;
+  --color: #444444; /*text color when you hover over homepage card*/
   --transition-time: 0.5s;
 }
 
@@ -60,7 +60,7 @@ body{
   margin: 0;
   min-height: 100vh; /*height: 100vh = 100% of the viewport height. height: 100% = 100% of the parent's element height. The viewport units are relative units, which means that they do not have an objective measurement*/
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #D6B7A3;
+  background: #262626;
 }
 
 a {
@@ -134,7 +134,7 @@ a {
 }
 
 .card:after {
-  background: #C2C6AF;
+  background: #a0a1b1;
   width: 200%;
   height: 200%;
 }
@@ -157,11 +157,11 @@ a {
 
 .header {
     width: auto;
-    margin: 0rem 3rem; /*top/bottom_left/right*/
+    margin: 0rem 3rem 4rem 3rem; /*top/bottom_left/right*/
     padding: 0rem;
     border: 0rem;
     height: auto;
-    box-shadow : 0 0 1em 1em #F0DBBC;
+    box-shadow : 0 0 2em 0.09em #F0DBBC;
     z-index: 1;
     background-image: url(./metasandfade.png);
     filter: grayscale(100%);
@@ -241,7 +241,7 @@ a {
     position: absolute;
     background: #999955;
     background-image: linear-gradient(
-  #F0DBBC 20%,#C2C6AF 20%, #C2C6AF 40%, #8E5D67 40%, #8E5D67 60%, #54747F 60%, #54747F 80%, #B29671 80%);
+    #B29671  20%,#C2C6AF 20%, #C2C6AF 40%, #8E5D67 40%, #8E5D67 60%, #54747F 60%, #54747F 80%, #F0DBBC 80%);
     top: 25%;
     margin: 0 auto auto 0;
     width: 100%;
@@ -272,15 +272,16 @@ a {
     padding-top: 3rem;
     padding-bottom: 3rem;
     margin-top: 6rem;
-    background: #E9E2D0; 
+    background: #a0a1b1;
     border-radius: .5rem;
     z-index: 3;
     box-shadow : 0 0 1em 1em #0D202F;
+    clear: both;
   }
 
   #biocard h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #333;
+    color: rgb(29, 29, 29);
     margin: 0 auto;
     padding: 1rem;
     font-size: 15pt;
@@ -289,7 +290,7 @@ a {
   
   #biocard p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #555;
+    color: rgb(29, 29, 29);
     font-size: 13px;
     padding: 1rem;
     z-index: 3;
