@@ -175,10 +175,10 @@ a {
   #mamikos-name {
     position: relative;
     font-size: 6em;
-    font-weight: normal;
+    font-weight: bold;
     text-align: center;
     vertical-align: text-bottom;
-    color: white;
+    color: #E4E4E4;
     letter-spacing: 1.5rem;
     background-color: transparent;
     z-index: 1;
