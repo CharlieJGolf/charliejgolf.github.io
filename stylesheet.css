@@ -57,11 +57,10 @@ does it need font styles? no*/
 }
 
 body{
-  margin: 0 auto;
+  margin: 0;
   min-height: 100vh; /*height: 100vh = 100% of the viewport height. height: 100% = 100% of the parent's element height. The viewport units are relative units, which means that they do not have an objective measurement*/
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #D6B7A3;
-  padding: 0;
 }
 
 a {
@@ -94,7 +93,7 @@ a {
   align-items: flex-end;
   background-size: cover;
   background-position: center;
-  box-shadow: 0 0 5em 1em #A4A4A4;
+  box-shadow: 0 0 5em -1em #A4A4A4;
   transition: all, var(--transition-time);
   position: relative;  /*here goes position.. pay attention how this interacts with the other elements*/
   overflow: hidden;
@@ -120,7 +119,7 @@ a {
   transform: scale(0); /*The scale() method increases or decreases the size of an element (according to the parameters given for the width and height).*/
   transform-origin: top left; /*starts at the top left*/
   border-radius: 50%;
-  position: relative;  /*here goes position again - card position, is relative*/
+  position: absolute;  /*here goes position again - card position, is relative*/
   left: -50%;
   top: -50%;
   z-index: -5;
@@ -155,37 +154,38 @@ a {
   color: white;
 }
 
+
 .header {
-  width: auto;
-  margin: 0rem 3rem; /*top/bottom_left/right*/
-  padding: 0rem;
-  border: 0rem;
-  height: auto;
-  box-shadow : 0 0 1em 1em #F0DBBC;
-  z-index: 1;
-  background-image: url(./metasandfade.png);
-  filter: grayscale(100%);
-  align-items: flex-end;
-  background-size: cover;
-  background-position: center;
-  position: static; /*default, added as reminder*/
-  overflow: hidden; /*without hidden, the header had a big top gap/margin*/
-}
-
-
-#mamikos-name {
-  position: relative;
-  font-size: 7em;
-  text-align: center;
-  font-weight: normal;
-  bottom: 0rem;
-  color: white;
-  letter-spacing: 0.1em;
-  background-color: transparent;
-  z-index: 1;
-}
-
-/*I need to define this header height, then define the image seperately*/
+    width: auto;
+    margin: 0rem 3rem; /*top/bottom_left/right*/
+    padding: 0rem;
+    border: 0rem;
+    height: auto;
+    box-shadow : 0 0 1em 1em #F0DBBC;
+    z-index: 1;
+    background-image: url(./metasandfade.png);
+    filter: grayscale(100%);
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    position: static; /*default, added as reminder*/
+    overflow: hidden; /*without hidden, the header had a big top gap/margin*/
+  }
+  
+  
+  #mamikos-name {
+    position: relative;
+    font-size: 7em;
+    text-align: center;
+    font-weight: normal;
+    bottom: 0rem;
+    color: white;
+    letter-spacing: 0.1em;
+    background-color: transparent;
+    z-index: 1;
+  }
+  
+  /*I need to define this header height, then define the image seperately*/
 
 
 @media screen and (max-width: 1285px) {
@@ -237,7 +237,7 @@ a {
 
 /*bio:*/
 
-  .biocontainer{
+.biocontainer{
     position: static;
   }
 
