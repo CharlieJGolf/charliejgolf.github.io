@@ -237,31 +237,45 @@ a {
 
 /*bio:*/
 
-.biocontainer{
-    position: static;
-  }
-
   #biogradient {
+    position: absolute;
     background: #999955;
     background-image: linear-gradient(
-        #F0DBBC 20%,#C2C6AF 20%, #C2C6AF 40%, #8E5D67 40%, #8E5D67 60%, #54747F 60%, #54747F 80%, #B29671 80%);
-    margin: 3rem auto auto 0;
+  #F0DBBC 20%,#C2C6AF 20%, #C2C6AF 40%, #8E5D67 40%, #8E5D67 60%, #54747F 60%, #54747F 80%, #B29671 80%);
+    top: 25%;
+    margin: 0 auto auto 0;
     width: 100%;
     height: 150px;
   }
     
-  #biocard {
-    position: relative;
-    width: 40%;
+  #biogradient:after{
+    content: "";
+    position: absolute;
+    background: #54747F;
     top: 25%;
-    padding: 25px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45rem;
+    height: 30rem;
+    border-radius: 1rem;
+    margin-top: 6rem;
+    z-index: -1;
+  }
+
+  #biocard {
+    position: absolute;
+    height: 25rem;
+    width: 40%;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding-top: 3rem;
     padding-bottom: 3rem;
-    margin: auto;
-    background: #E9E2D0;
-    box-shadow: -20px 0 35px -25px black, 20px 0 35px -25px black;
+    margin-top: 6rem;
+    background: #E9E2D0; 
     border-radius: .5rem;
-    z-index: 1;
+    z-index: 3;
+    box-shadow : 0 0 1em 1em #0D202F;
   }
 
   #biocard h2 {
