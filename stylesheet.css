@@ -205,6 +205,12 @@ a {
     grid-template-columns: 1fr;
   }
   .header {
+    position: relative;
+    font-size: 3em;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: bottom;
+    color: #E4E4E4;
     width: auto;
     justify-content: center;
     height: auto;
