@@ -47,20 +47,22 @@ does it need font styles? no*/
 /*I should be fine to import that css font sheet if needed..*/
 
 :root {
-  --color: #310c14;
+  --color: white;
   --transition-time: 0.5s;
 }
 
 
 * {
   box-sizing: border-box;
+  border: 1px dotted black;
 }
 
 body{
-  margin: 0;
+  margin: 0 auto;
   min-height: 100vh; /*height: 100vh = 100% of the viewport height. height: 100% = 100% of the parent's element height. The viewport units are relative units, which means that they do not have an objective measurement*/
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #310c14;
+  background: #D6B7A3;
+  padding: 0;
 }
 
 a {
@@ -93,11 +95,11 @@ a {
   align-items: flex-end;
   background-size: cover;
   background-position: center;
-  box-shadow: 0 0 5em -1em #A4A4A4;
+  box-shadow: 0 0 5em 1em #A4A4A4;
   transition: all, var(--transition-time);
   position: relative;  /*here goes position.. pay attention how this interacts with the other elements*/
   overflow: hidden;
-  border: 10px solid #ccc;
+  border: 10px solid #54747F;
   text-decoration: none;
 }
 
@@ -134,7 +136,7 @@ a {
 }
 
 .card:after {
-  background: white;
+  background: #C2C6AF;
   width: 200%;
   height: 200%;
 }
@@ -155,34 +157,33 @@ a {
 }
 
 .header {
-  font-size: 1.2em;
-  display: flex;
-  padding: 1rem 3rem; /*1em=top/bottom 3em=left/right*/
-  height: 12rem;
+  width: auto;
+  margin: 0rem 3rem; /*top/bottom_left/right*/
+  padding: 0rem;
+  border: 0rem;
+  height: auto;
+  box-shadow : 0 0 1em 1em #F0DBBC;
+  z-index: 1;
+  background-image: url(./metasandfade.png);
+  filter: grayscale(100%);
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+  position: static; /*default, added as reminder*/
+  overflow: hidden; /*without hidden, the header had a big top gap/margin*/
 }
 
-.header .mamiko-headshot {
-  height: auto;
-  margin-right: 1em;
-  border: 0.2em solid #DAA9B3;
-  box-shadow: 0 0 5em -1em #A4A4A4;
-}
-   
-.header h1 {
-  font-size: 3rem;
+
+#mamikos-name {
+  position: relative;
+  font-size: 7em;
+  text-align: center;
   font-weight: normal;
+  bottom: 0rem;
   color: white;
   letter-spacing: 0.1em;
-  border-left: 0em;
-  border-right: 0em;
-  border-top: 0.01em solid #DAA9B3;
-  border-bottom: 0.01em solid #DAA9B3;
-  padding: 0.1em 0.7em;
-  margin-left: 0em;
-  box-shadow: 0 0 5em 10em #A77680;
-  background-color: #A77680;
-
-  z-index: -1;
+  background-color: transparent;
+  z-index: 1;
 }
 
 /*I need to define this header height, then define the image seperately*/
@@ -233,6 +234,63 @@ a {
     margin: 0;
   }
 }
+
+
+/*bio:*/
+
+  #biogradient {
+    background: #999955;
+    background-image: linear-gradient(#DAB046 20%, #D73B25 20%, #D73B25 40%, #C71B25 40%, #C71B25 60%, #961A39 60%, #961A39 80%, #601035 80%);
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 100%;
+    height: 150px;
+  }
+  
+  #biogradient:after {
+    content: "";
+    position: absolute;
+    background: #E9E2D0;
+    left: 50%;
+    margin-top: -67.5px;
+    margin-left: -270px;
+    padding-left: 20px;
+    border-radius: 5px;
+    width: 520px;
+    height: 275px;
+    z-index: -1;
+  }
+  
+  #biocard {
+    position: absolute;
+    width: 450px;
+    height: 225px;
+    padding: 25px;
+    padding-top: 0;
+    padding-bottom: 0;
+    left: 50%;
+    top: 67.5px;
+    margin-left: -250px;
+    background: #E9E2D0;
+    box-shadow: -20px 0 35px -25px black, 20px 0 35px -25px black;
+    z-index: 5;
+  }
+
+  #biocard h2 {
+    font-family: courier;
+    color: #333;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 15pt;
+  }
+  
+  #biocard p {
+    font-family: courier;
+    color: #555;
+    font-size: 13px;
+  }
+
+
 
 
 /*________      .__.                 
