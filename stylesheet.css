@@ -205,6 +205,7 @@ a {
     grid-template-columns: 1fr;
   }
   .header {
+    width: auto;
     justify-content: center;
     height: auto;
   }
