@@ -160,7 +160,7 @@ a {
     margin: 0rem 3rem 4rem 3rem; /*top/bottom_left/right*/
     padding: 0;
     height: auto;
-    box-shadow : 0 0 2em 0.09em #F0DBBC;
+    box-shadow : 0 0 0.5em 0.5em #383838;
     z-index: 1;
     background-image: url(./metasandfade.png);
     filter: grayscale(100%);
