@@ -7,6 +7,7 @@
 }
 
 img[src*="Mamiko-CoverPage"]{
+    filter: grayscale(100%);
     width: 100%;
     height: auto;
     opacity: 0.85;
@@ -16,13 +17,14 @@ a[href*="./homepage.html"]{
     position:fixed;
     top: 25%;
     left: 50%;
-    width: 15rem;
+    width: 18rem;
+    height: 2.5rem;
+    text-align: center;
     transform: translate(-50%, -50%);
-    background-color: #DAA9B3;
+    background-color: #54747F;
     border: none;
     color: white;
     padding: 0.2rem;
-    text-align: center;
     z-index:1;
     font-size: 24px;
     font-family: Verdana;
