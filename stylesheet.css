@@ -85,7 +85,7 @@ a {
   height: 20em;
   width: 15em;
   font-size: 1.5em;
-  color: white;
+  color: #A4A4A4;
   border-radius: 1em; /*determines rounded corners*/
   padding: 1em; /*spacing between content and borders*/
   /*margin: 2em;  <<this was commented out, from the template*/
@@ -97,7 +97,7 @@ a {
   transition: all, var(--transition-time);
   position: relative;  /*here goes position.. pay attention how this interacts with the other elements*/
   overflow: hidden;
-  border: 10px solid #54747F;
+  border: 10px solid #999999;
   text-decoration: none;
 }
 
@@ -151,15 +151,14 @@ a {
   font-size: 3em;
   margin-bottom: 1.2rem;
   margin-left: 1rem;
-  color: white;
+  color: #999999;
 }
 
 
 .header {
     width: auto;
     margin: 0rem 3rem 4rem 3rem; /*top/bottom_left/right*/
-    padding: 0rem;
-    border: 0rem;
+    padding: 0;
     height: auto;
     box-shadow : 0 0 2em 0.09em #F0DBBC;
     z-index: 1;
@@ -175,12 +174,12 @@ a {
   
   #mamikos-name {
     position: relative;
-    font-size: 7em;
-    text-align: center;
+    font-size: 6em;
     font-weight: normal;
-    bottom: 0rem;
+    text-align: center;
+    vertical-align: text-bottom;
     color: white;
-    letter-spacing: 0.1em;
+    letter-spacing: 1.5rem;
     background-color: transparent;
     z-index: 1;
   }
