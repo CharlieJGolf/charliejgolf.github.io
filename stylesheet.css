@@ -193,7 +193,7 @@ a {
 
 @media screen and (max-width: 1285px) {
   .cards-wrapper {
-    grid-template-columns: 1fr 1fr;  /*defined in the cards-wrapper element*/
+    grid-template-columns: 1fr;  /*defined in the cards-wrapper element*/
   }  /*this is 1fr 1fr, is why, when looking at, from iphone, you get two cards, then the third is created on a second row. there's probably a way to say, if 2 rows, make the card on second row, centered*/
   .header {
     height:auto;
