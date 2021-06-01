@@ -243,7 +243,7 @@ a {
 }
 
 
-/*bio:*/
+/*bio header:*/
 
 .bio-header-container {
 /*these 3 flex settings apply to children elements, that's why I'm not repeating it for bio-to-home*/
@@ -259,7 +259,6 @@ a {
 
 .bio-to-home {
 /*https://flaviocopes.com/flexbox/#properties-that-apply-to-each-single-item*/
-    margin: 2rem 2rem 2rem 2rem;
     letter-spacing: 1rem;
     border-top: 0.1rem solid white;
     border-top-left-radius: 0.5rem;
@@ -281,11 +280,15 @@ a {
     opacity:1;
 }
 
+
+/*bio body:*/
+
 .bio-container {
+    display: flex;  /*same as saying, display: inline-flex*/
+    justify-content: center; /*horizontal centering of main body container*/
+    align-items: center; /*verticle centering*/
     margin: 2rem 2rem 2rem 2rem;
     overflow: hidden;
-    display: flex;
-    align-items: center;
 }
 .bio-image {
     padding: 0;
@@ -294,10 +297,7 @@ a {
 }
 
 .bio-image img {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center; /*https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content*/
-    max-height: 25rem; //
+    max-height: 25rem;
     width: auto;
     box-shadow: 0 0 2rem -1rem #A4A4A4;
     border-radius: 0.2rem;
@@ -307,9 +307,7 @@ a {
     color:whitesmoke;
     text-align: left;
     padding-left: 2rem;
-    margin-left: 2rem;
-    margin-top: 2rem;
-    width: auto;
+    margin: 2rem 2rem 2rem 2rem;
 }
 
 .bio-content p{
