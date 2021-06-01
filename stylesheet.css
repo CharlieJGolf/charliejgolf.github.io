@@ -1,12 +1,13 @@
-/*index*/
 
+
+/* ---------style for index ----------*/
 .container{
     position: relative;
     width: 100%;
     height: auto;
 }
 
-img[src*="Mamiko-CoverPage"]{
+img[src*="mamiko-backwards"]{
     filter: grayscale(100%);
     width: 100%;
     height: auto;
@@ -40,17 +41,10 @@ img[src*="Mamiko-CoverPage"]{
     opacity:1;
 }
 
-/*homepage*/
-
-/*these "banner container" styles, will be applicable for
-homepage, filmWorks and socialmedia (aka all pages accept index
-does it need font styles? no*/
-
-/*I should be fine to import that css font sheet if needed..*/
+/* ---------- Core of all ---------- */
 
 :root {
-  --color: #E4E4E4; /*text color when you hover over homepage card*/
-  --transition-time: 0.5s;
+  /*--transition-time: 0.5s;*/
 }
 
 
@@ -61,186 +55,112 @@ does it need font styles? no*/
 
 body{
   margin: 0;
+  padding: 0;
   min-height: 100vh; /*height: 100vh = 100% of the viewport height. height: 100% = 100% of the parent's element height. The viewport units are relative units, which means that they do not have an objective measurement*/
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #262626;
+  background: whitesmoke;
 }
 
-a {
-  color: inherit; /*inherit from what parent.. find out*/
-}
+/* -------------- homepage body container ------------ */
 
-.cards-wrapper {
-  display: grid; /*Defines the element as a grid container and establishes a new grid formatting context for its contents - https://css-tricks.com/snippets/css/complete-guide-grid/*/
-  justify-content: center; /*https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content*/
-  align-items: center;
-  grid-template-columns: 1fr 1fr 1fr; /*set each item to one third the width of the grid container*/
-  grid-gap: 4rem; /*1rem=16px (aka base / browser default) 18px = 1.125rem / 20px = 1.25rem / 24px = 1.5rem etc.*/
-  padding: 4rem; /*rem is relative to browers/html/root/base. whereas em is relative to is nearest parent.*/
-  margin: 0 auto;
-  width: max-content /*this means that the content will not wrap at all even if it causes overflows*/
-}
-
-.card {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --bg-filter-opacity: 0.5;
-  background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img);
-  height: 20em;
-  width: 15em;
-  font-size: 1.5em;
-  color: #A4A4A4;
-  border-radius: 1em; /*determines rounded corners*/
-  padding: 0.5em; /*spacing between content and borders*/
-  /*margin: 2em;  <<this was commented out, from the template*/
-  display: flex; /*https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
-  align-items: flex-end;
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0 0 5em -1em #A4A4A4;
-  transition: all, var(--transition-time);
-  position: relative;  /*here goes position.. pay attention how this interacts with the other elements*/
-  overflow: hidden;
-  border: 10px solid #999999;
-  text-decoration: none;
-}
-
-.card:hover {
-  transform: rotate(0);
-}
-
-.card p {
-  font-size: 0.75em;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin-top: 0.5em;
-  line-height: 2em;
-}
-
-/*skipping date and card tags, as it's skipped in my html*/
-
-.card:before, .card:after {
-  content: '';
-  transform: scale(0); /*The scale() method increases or decreases the size of an element (according to the parameters given for the width and height).*/
-  transform-origin: top left; /*starts at the top left*/
-  border-radius: 50%;
-  position: absolute;  /*here goes position again - card position, is relative*/
-  left: -50%;
-  top: -50%;
-  z-index: -5;
-  transition: all, var(--transition-time);
-  transition-timing-function: ease-in-out;
-}
-
-.card:before {
-  background: #ddd;
-  width: 250%;
-  height: 250%;
-}
-
-.card:after {
-  background: #a0a1b1;
-  width: 200%;
-  height: 200%;
-}
-
-.card:hover {
-  color: var(--color);
+.container {
+    display: flex;
+    height: 100vh;
 }
   
-.card:hover:before, .card:hover:after {
-  transform: scale(1);
+.section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    transition: flex .4s ease;
+    position: relative;
+}
+  
+.pagenav {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+    text-decoration: none;
+    opacity: 0.7;
+    transition: 0.3s;
 }
 
-.card-grid-space .title {
-  font-size: 3em;
-  margin-bottom: 1.2rem;
-  margin-left: 1rem;
-  color: #999999;
-}
+.pagenav:hover {
+    color: white;
+    opacity: 1;
+    text-shadow: 0 0 .5rem gray;
+  }
 
+.section .overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: background-color .8s ease;
+}
+  
+.section .content {
+    z-index: 2;
+}
+  
+.section:hover {
+    flex: 2;
+}
+  
+.section:hover .overlay {
+    background-color: rgba(0, 0, 0, 0);
+}
+  
+#bio {
+    background-image: url(./mamiko-backwards.png);
+    object-fit: scale-down; 
+  }
+  
+#film-works {
+    background-image: url(./mamiko-floral-dancing.png);
+}
+  
+#connect {
+    background-image: url(./mamiko-meta.png);
+}
 
 .header {
-    width: auto;
-    margin: 0rem 3rem 4rem 3rem; /*top/bottom_left/right*/
+    display: flex;
+    justify-content: center; /*horizontal*/
+    align-items: flex-end; /*vertically center the*/
+    margin: 0rem 3rem 3rem 3rem; /*top/bottom_left/right*/
     padding: 0;
-    height: auto;
-    box-shadow : 0 0 0.5em 0.5em #383838;
     z-index: 1;
     background-image: url(./metasandfade.png);
     filter: grayscale(100%);
-    align-items: flex-end;
     background-size: cover;
     background-position: center;
-    position: static; /*default, added as reminder*/
     overflow: hidden; /*without hidden, the header had a big top gap/margin*/
-    border-bottom-left-radius: 0.2rem;
-    border-bottom-right-radius: 0.2rem;    
+    border-bottom-left-radius: 0.1rem;
+    border-bottom-right-radius: 0.1rem;    
 }
 
-  #mamikos-name {  /*nothing really changing with this text alingment because this is child to the header-parent. header would need to be sibling, both inside container - it's fine for now.*/
-    position: relative;   /* If position: relative; - the bottom property makes the element's bottom edge to move above/below its normal position (which is centered it seems)  https://www.w3schools.com/cssref/pr_pos_bottom.asp */
-    top: 4rem;
+#mamikos-name {  /*nothing really changing with this text alingment because this is child to the header-parent. header would need to be sibling, both inside container - it's fine for now.*/
+    display: flex;   /* If position: relative; - the bottom property makes the element's bottom edge to move above/below its normal position (which is centered it seems)  https://www.w3schools.com/cssref/pr_pos_bottom.asp */
+    justify-content: center; /*horizontal*/
+    align-self: flex-end;
+    /*(vertical) flex-end isn't working on it's own becuase parent container has value of center*/
+    /*use "align-self: flex-end", to override the .header parent value of, "align-items: flex-end*/
     font-size: 6.5rem;
+    color: whitesmoke;
     font-weight: normal;
+    text-shadow: 0 0 .5rem gray;
     text-align: center;
-    padding-bottom: -3rem;
-    color: #E4E4E4;
     letter-spacing: 1.5rem;
     background-color: transparent;
     z-index: 1;
-  }
-
-@media screen and (max-width: 1285px) {
-  .cards-wrapper {
-    grid-template-columns: 1fr;  /*defined in the cards-wrapper element*/
-  }  /*this is 1fr 1fr, is why, when looking at, from iphone, you get two cards, then the third is created on a second row. there's probably a way to say, if 2 rows, make the card on second row, centered*/
-  .header {
-    height:auto;
-  }
 }
 
-@media screen and (max-width: 900px) {
-  .cards-wrapper {
-    grid-template-columns: 1fr;
-  }
-  .header {
-    position: relative;
-    font-size: 1rem;
-    font-weight: normal;
-    text-align: center;
-    vertical-align: bottom;
-    color: #E4E4E4;
-    width: auto;
-    justify-content: center;
-    height: auto;
-  }
-  .card-grid-space .title {
-    margin-left: 0;
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .cards-wrapper {
-    padding: 4rem 2rem;
-  }
-  .card {
-    max-width: calc(100vw - 4rem);
-  }
-  .header {
-    height:auto;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .header {
-    display: block;
-    text-align: center;
-    height: auto;
-  }
-  .header h1 {
-    margin: 0;
-  }
-}
 
 
 /*multi-use header:*/
@@ -250,7 +170,7 @@ a {
     display: flex;
     justify-content: flex-start;
     /*justify-content is for verticle alignment. flex-start positions at beginning of the container (this is default)*/
-    align-items: center; 
+    align-items: center;
     /*align-items center, is verticle alignment. center is in the middle of container*/
 
     margin-left: 2rem;
@@ -261,13 +181,13 @@ a {
 /*https://flaviocopes.com/flexbox/#properties-that-apply-to-each-single-item*/
     letter-spacing: 1rem;
     margin-left: 2rem;
-    border-top: 0.1rem solid white;
+    border-top: 0.1rem solid black;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
-    border-bottom: 0.1rem solid white;
+    border-bottom: 0.1rem solid black;
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
-    color: white;
+    color: black;
     z-index:1;
     font-size: 3rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;;
@@ -305,14 +225,14 @@ a {
 }
 
 .bio-content {
-    color:whitesmoke;
+    color: black;
     text-align: left;
     padding-left: 2rem;
     margin: 2rem 2rem 2rem 2rem;
 }
 
 .bio-content p{
-    border-left: 0.5rem solid whitesmoke;
+    border-left: 0.5rem solid black;
     padding-left: 1.5rem;
 }
 
