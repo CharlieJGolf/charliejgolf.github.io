@@ -7,29 +7,32 @@
     height: auto;
 }
 
-img[src*="mamiko-backwards"]{
-    filter: grayscale(100%);
+img[src*="falling-bw"]{
+    position: absolute;
+    object-fit: cover;
+    /*object-fit: scale-down;*/
+    /*doesn't crop any of the image but as a result of preserving scale, it produces left and right margins*/
     width: 100%;
     height: auto;
-    opacity: 0.85;
+    opacity: 1;
 }
 
 .land-to-home {
     position:fixed;
-    top: 25%;
+    top: 20%;
     left: 50%;
-    width: 18rem;
-    height: 2.5rem;
-    text-align: center;
     transform: translate(-50%, -50%);
+    width: 18rem;
+    height: 4rem;
+    text-align: center;
+    padding-top: 1.9rem;
     background-color: #54747F;
-    border: none;
+    border: #54747F;
+    border-radius: 0.5rem;
     color: white;
-    padding: 0.2rem;
     z-index:1;
-    font-size: 24px;
-    font-family: Verdana;
-    margin: 4px 2px;
+    font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     opacity: 0.6;
     transition: 0.3s;
     display: inline-block;
@@ -40,6 +43,7 @@ img[src*="mamiko-backwards"]{
 .land-to-home:hover{
     opacity:1;
 }
+
 
 /* ---------- Core of all ---------- */
 
@@ -61,7 +65,53 @@ body{
   background: whitesmoke;
 }
 
-/* -------------- homepage body container ------------ */
+
+/* -------------- homepage header ------------ */
+
+.homepage-header-container {
+    display: flex;
+    justify-content: center; /*horizontal*/
+    align-items: center; /*vertically adjust*/
+    background: rgb(48,48,48);
+    background: linear-gradient(0deg, rgba(48,48,48,1) 0%, rgba(247,247,255,1) 50%, rgba(48,48,48,1) 100%);
+}
+
+.header {
+    display: flex;
+    justify-content: center; /*horizontal*/
+    align-items: center; /*vertically adjust*/
+    margin: 1rem 3rem 1rem 3rem; /*top/bottom_left/right*/
+    z-index: 1;
+    background-image: url(./metasandfade.png);
+    background-position-x: center;
+    background-position-y: center ;
+    filter: grayscale(100%);
+    background-size: cover;
+    overflow: hidden; /*without hidden, the header had a big top gap/margin*/
+    font-size: 6rem;
+    color: whitesmoke;  
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+    text-shadow: 0 0 .5rem gray;
+    /*border-top: 0.2rem solid white;*/
+    border-right: 0.5rem solid white;
+    border-left: 0.5rem solid white;
+    /*border-bottom: 0.2rem solid rgba(48,48,48,1);*/
+}
+
+.mamikos-name {  /*nothing really changing with this text alingment because this is child to the header-parent. header would need to be sibling, both inside container - it's fine for now.*/
+  /* If position: relative; - the bottom property makes the element's bottom edge to move above/below its normal position (which is centered it seems)  https://www.w3schools.com/cssref/pr_pos_bottom.asp */
+    font-weight:lighter;
+    text-shadow: 0 0 .5rem gray;
+    letter-spacing: 1.5rem;
+    background-color: transparent;
+    z-index: 1;
+    margin: 2rem;
+}
+
+
+/* -------------- homepage body  ------------ */
 
 .container {
     display: flex;
@@ -84,7 +134,7 @@ body{
 .pagenav {
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-decoration: none;
     opacity: 0.7;
     transition: 0.3s;
@@ -118,7 +168,10 @@ body{
   
 #bio {
     background-image: url(./mamiko-backwards.png);
-    object-fit: scale-down; 
+    object-fit: scale-down;
+    /* I don't know if this is necesarry or not */
+    /* NOTE: from the template css, I removed this from the image url:  */
+    /* &auto=format&fit=crop&w=500&q=60 */
   }
   
 #film-works {
@@ -129,37 +182,6 @@ body{
     background-image: url(./mamiko-meta.png);
 }
 
-.header {
-    display: flex;
-    justify-content: center; /*horizontal*/
-    align-items: flex-end; /*vertically center the*/
-    margin: 0rem 3rem 3rem 3rem; /*top/bottom_left/right*/
-    padding: 0;
-    z-index: 1;
-    background-image: url(./metasandfade.png);
-    filter: grayscale(100%);
-    background-size: cover;
-    background-position: center;
-    overflow: hidden; /*without hidden, the header had a big top gap/margin*/
-    border-bottom-left-radius: 0.1rem;
-    border-bottom-right-radius: 0.1rem;    
-}
-
-#mamikos-name {  /*nothing really changing with this text alingment because this is child to the header-parent. header would need to be sibling, both inside container - it's fine for now.*/
-    display: flex;   /* If position: relative; - the bottom property makes the element's bottom edge to move above/below its normal position (which is centered it seems)  https://www.w3schools.com/cssref/pr_pos_bottom.asp */
-    justify-content: center; /*horizontal*/
-    align-self: flex-end;
-    /*(vertical) flex-end isn't working on it's own becuase parent container has value of center*/
-    /*use "align-self: flex-end", to override the .header parent value of, "align-items: flex-end*/
-    font-size: 6.5rem;
-    color: whitesmoke;
-    font-weight: normal;
-    text-shadow: 0 0 .5rem gray;
-    text-align: center;
-    letter-spacing: 1.5rem;
-    background-color: transparent;
-    z-index: 1;
-}
 
 
 
@@ -172,7 +194,6 @@ body{
     /*justify-content is for verticle alignment. flex-start positions at beginning of the container (this is default)*/
     align-items: center;
     /*align-items center, is verticle alignment. center is in the middle of container*/
-
     margin-left: 2rem;
     margin-top: 2rem;
 }
@@ -202,7 +223,7 @@ body{
 }
 
 
-/*bio page body:*/
+/*__________________bio page body:_____________________*/
 
 .bio-container {
     display: flex;  /*same as saying, display: inline-flex*/
