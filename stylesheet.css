@@ -243,9 +243,9 @@ a {
 }
 
 
-/*bio header:*/
+/*multi-use header:*/
 
-.bio-header-container {
+.simple-header-container {
 /*these 3 flex settings apply to children elements, that's why I'm not repeating it for bio-to-home*/
     display: flex;
     justify-content: flex-start;
@@ -257,9 +257,10 @@ a {
     margin-top: 2rem;
 }
 
-.bio-to-home {
+.back-to-home {
 /*https://flaviocopes.com/flexbox/#properties-that-apply-to-each-single-item*/
     letter-spacing: 1rem;
+    margin-left: 2rem;
     border-top: 0.1rem solid white;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
@@ -276,24 +277,24 @@ a {
     cursor: pointer;
 }
 
-.bio-to-home:hover{
+.back-to-home:hover{
     opacity:1;
 }
 
 
-/*bio body:*/
+/*bio page body:*/
 
 .bio-container {
     display: flex;  /*same as saying, display: inline-flex*/
     justify-content: center; /*horizontal centering of main body container*/
-    align-items: center; /*verticle centering*/
+    align-items: center; /*vertical centering*/
     margin: 2rem 2rem 2rem 2rem;
     overflow: hidden;
 }
+
 .bio-image {
     padding: 0;
     margin: 2rem 0 2rem 2rem;
-    align-items: center;
 }
 
 .bio-image img {
@@ -301,8 +302,8 @@ a {
     width: auto;
     box-shadow: 0 0 2rem -1rem #A4A4A4;
     border-radius: 0.2rem;
-
 }
+
 .bio-content {
     color:whitesmoke;
     text-align: left;
@@ -311,10 +312,12 @@ a {
 }
 
 .bio-content p{
-  border-left: 0.5rem solid whitesmoke;
-  padding-left: 1.5rem;
+    border-left: 0.5rem solid whitesmoke;
+    padding-left: 1.5rem;
 }
 
+
+/*film works body*/
 
 
 
