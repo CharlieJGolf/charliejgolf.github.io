@@ -230,42 +230,37 @@ img[src*="falling-bw"]{
     border-top: .05rem solid whitesmoke;
 
     /*border: 2pt dotted green;*/
-
 }
 
-.nav-back-to-home{
-    font-size: 1.5rem;
-    padding: .2rem;
-    color: #98433E;
-    margin: 4rem;
-    text-decoration: none;
-    cursor: pointer;
-    border: .05rem solid #98433E;
-    border-radius: .5rem;
-    font-variant: small-caps;
-    
-
-    /*border: 2pt dotted turquoise;*/
+/*____back icon____*/
+.back-icon-wrapper{
+    margin-left: 4rem;
 }
-
-.nav-back-to-home:hover{
+.back-icon{
+    margin: 1rem;
+}
+.back-icon:hover{
     box-shadow: 0rem 0rem .3rem .01rem whitesmoke;
+    border-radius: .15rem;
 }
+/*____back icon____*/
 
+
+
+/*____media icon____*/
 .social-media-wrapper{
     margin-right: 4rem;
 }
 
 .icon{
-    margin-left: 2rem;
-    text-decoration: none;
+    margin: 1rem;
 }
 
 .icon:hover{
     box-shadow: 0rem 0rem .3rem .01rem whitesmoke;
     border-radius: .15rem;
 }
-
+/*____media icon____*/
 
 
 
