@@ -9,12 +9,14 @@
 
 img[src*="falling-bw"]{
     position: absolute;
-    object-fit: cover;
-    /*object-fit: scale-down;*/
+    object-fit: contain;
     /*doesn't crop any of the image but as a result of preserving scale, it produces left and right margins*/
-    width: 100%;
-    height: auto;
-    opacity: 1;
+    height:auto;
+    margin:auto;
+    box-shadow: 0rem 1rem 1rem -1rem #505050;
+    border-radius: .3rem;
+
+
 }
 
 .land-to-home {
@@ -25,10 +27,10 @@ img[src*="falling-bw"]{
     width: 18rem;
     height: 4rem;
     text-align: center;
-    padding-top: 1.9rem;
-    background-color: #54747F;
-    border: #54747F;
-    border-radius: 0.5rem;
+    padding-top: .9rem;
+    background-color: #98433E;
+    border: #98433E;
+    border-radius: 0.4rem;
     color: white;
     z-index:1;
     font-size: 2rem;
@@ -54,17 +56,25 @@ img[src*="falling-bw"]{
 
 * {
   box-sizing: border-box;
-  /*border: 2px dotted black;*/
+  /*border: 1px dotted black;*/
 }
 
-body{
+/*_________body__________*/
+
+.allbutlandingpage{
   margin: 0;
   padding: 0;
   min-height: 100vh; /*height: 100vh = 100% of the viewport height. height: 100% = 100% of the parent's element height. The viewport units are relative units, which means that they do not have an objective measurement*/
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: whitesmoke;
+  background: #b29671;
+  background: linear-gradient(0deg, #b29671 0%, #d5d2cb 50%, #b29671 100%);
 }
 
+.landingpagebody{
+    background: whitesmoke;
+    margin: 0;
+    padding: 0;
+}
 
 /* -------------- homepage header ------------ */
 
@@ -72,42 +82,52 @@ body{
     display: flex;
     justify-content: center; /*horizontal*/
     align-items: center; /*vertically adjust*/
-    background: rgb(48,48,48);
-    background: linear-gradient(0deg, rgba(48,48,48,1) 0%, rgba(247,247,255,1) 50%, rgba(48,48,48,1) 100%);
+    background: #b29671;
+    background: linear-gradient(0deg, #b29671 0%, #d5d2cb 50%, #b29671 100%);
 }
 
 .header {
     display: flex;
     justify-content: center; /*horizontal*/
     align-items: center; /*vertically adjust*/
-    margin: 1rem 3rem 1rem 3rem; /*top/bottom_left/right*/
+    margin: .5rem 3rem .5rem 3rem; /*top/bottom_left/right*/
     z-index: 1;
     background-image: url(./metasandfade.png);
     background-position-x: center;
-    background-position-y: center ;
-    filter: grayscale(100%);
+    background-position-y: center;
     background-size: cover;
     overflow: hidden; /*without hidden, the header had a big top gap/margin*/
     font-size: 5rem;
-    color: whitesmoke;  
+    color: whitesmoke;
     text-align: center;
-    justify-content: center;
     align-self: center;
     text-shadow: 0 0 .5rem gray;
     /*border-top: 0.2rem solid white;*/
-    border-right: 0.5rem solid white;
-    border-left: 0.5rem solid white;
+    border-right: 0.5rem solid #D5D2CB;
+    border-left: 0.5rem solid #D5D2CB;
     /*border-bottom: 0.2rem solid rgba(48,48,48,1);*/
+    box-shadow:
+    0px 11px 8px -10px #D5D2CB,
+    0px -11px 8px -10px #D5D2CB; 
 }
 
 .mamikos-name {  /*nothing really changing with this text alingment because this is child to the header-parent. header would need to be sibling, both inside container - it's fine for now.*/
   /* If position: relative; - the bottom property makes the element's bottom edge to move above/below its normal position (which is centered it seems)  https://www.w3schools.com/cssref/pr_pos_bottom.asp */
     font-weight:lighter;
+    font-variant: small-caps;
     text-shadow: 0 0 .5rem gray;
     letter-spacing: 1.5rem;
     background-color: transparent;
     z-index: 1;
     margin: 2rem;
+    opacity: 0.7;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.mamikos-name:hover{
+    opacity:1;
+    text-shadow: 0 0 .5rem whitesmoke;
 }
 
 
@@ -134,6 +154,9 @@ body{
 .pagenav {
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    font-variant: small-caps;
+    letter-spacing: .8rem;
     font-size: 2.5rem;
     text-decoration: none;
     opacity: 0.7;
@@ -176,6 +199,7 @@ body{
   
 #film-works {
     background-image: url(./mamiko-floral-dancing.png);
+
 }
   
 #connect {
@@ -185,41 +209,46 @@ body{
 
 
 
-/*multi-use header:*/
+/*_______________ multi-use header _____________*/
 
 .simple-header-container {
 /*these 3 flex settings apply to children elements, that's why I'm not repeating it for bio-to-home*/
     display: flex;
     justify-content: flex-start;
-    /*justify-content is for verticle alignment. flex-start positions at beginning of the container (this is default)*/
+    /*justify-content is for horizontal alignment. flex-start positions at beginning of the container (this is default)*/
     align-items: center;
     /*align-items center, is verticle alignment. center is in the middle of container*/
+    text-align: center; /*leaving this here, so that it applies for when screen is narrow*/
     margin-left: 2rem;
     margin-top: 2rem;
+    margin-right: 2rem;
+
 }
 
 .back-to-home {
 /*https://flaviocopes.com/flexbox/#properties-that-apply-to-each-single-item*/
     letter-spacing: 1rem;
     margin-left: 2rem;
-    border-top: 0.1rem solid black;
+    border-top: 0.1rem solid #D5D2CB;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
-    border-bottom: 0.1rem solid black;
+    border-bottom: 0.1rem solid #D5D2CB;
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
-    color: black;
+    color: #98433E;
+    font-variant: small-caps;
+    font-weight: lighter;
     z-index:1;
-    font-size: 3rem;
+    font-size: 4rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;;
-    opacity: 0.5;
-    transition: 0.3s;
     text-decoration: none;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .back-to-home:hover{
-    opacity:1;
+    text-shadow: 0 0 .3rem #D5D2CB;
+
 }
 
 
@@ -228,7 +257,7 @@ body{
 .bio-container {
     display: flex;  /*same as saying, display: inline-flex*/
     justify-content: center; /*horizontal centering of main body container*/
-    align-items: center; /*vertical centering*/
+    align-items:center; /*vertical centering*/
     margin: 2rem 2rem 2rem 2rem;
     overflow: hidden;
 }
@@ -242,21 +271,42 @@ body{
     max-height: 25rem;
     width: auto;
     box-shadow: 0 0 2rem -1rem #A4A4A4;
-    border-radius: 0.2rem;
+    border-radius:0;
+    opacity: .85;
 }
 
 .bio-content {
-    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #51666B;
     text-align: left;
     padding-left: 2rem;
     margin: 2rem 2rem 2rem 2rem;
 }
 
 .bio-content p{
-    border-left: 0.5rem solid black;
+    font-weight: bold;
+    font-size: 1rem;
+    border-left: 0.5rem solid #98433E;
     padding-left: 1.5rem;
 }
 
+.bio-content h3{
+    font-weight: 2000;
+    font-size: 1.75rem;
+    color: #98433E;
+    
+}
+
+/*for the media queries..
+I just need to add these two things to
+
+.bio-container{
+    align-items:flex-start;
+    flex-wrap: wrap;
+.simple-header-container{
+    text-align: center;
+
+*/
 
 /*film works body*/
 
