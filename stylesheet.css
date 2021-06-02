@@ -250,9 +250,14 @@ img[src*="falling-bw"]{
     box-shadow: 0rem 0rem .3rem .01rem whitesmoke;
 }
 
-/*.social-media-wrapper{
-I can't comprehend whether I'll need to wrap these icons or not
-}*/
+.social-media-wrapper{
+    margin-right: 4rem;
+}
+
+.icon{
+    margin-left: 2rem;
+    text-decoration: none;
+}
 
 
 
