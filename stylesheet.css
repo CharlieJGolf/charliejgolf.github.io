@@ -154,20 +154,19 @@ img[src*="falling-bw"]{
 
 
 
-/*_______________ multi-use header _____________*/
+/*_______________ the re-useable header _____________*/
 
 
 .homepage-header-container {
     display: flex;
     justify-content: center; /* container-level adjustment - horizontal */
     align-items: center; /* container-level adjustment - vertical */
-    border-bottom: .3rem solid #BD9050;
+    /*border-bottom: .3rem solid #BD9050;*/
     background: #333E3C;
     /*background: linear-gradient(0deg, #b29671 0%, #d5d2cb 50%, #b29671 100%);*/
 
     /*border: 2pt dotted white;*/
 }
-
 
 .header {
     display: flex;
@@ -199,7 +198,7 @@ img[src*="falling-bw"]{
     /*border: 2pt dotted black;*/
 }
 
-.back-to-home {  /* inherits the 3 flex styles from parent (.header) */
+.image-back-to-home {  /* inherits the 3 flex styles from parent (.header) */
     align-self: center;
     font-size: 5rem;  
     font-weight:lighter;
@@ -216,10 +215,51 @@ img[src*="falling-bw"]{
     /*border: 2pt dotted blue;*/
 }
 
-.back-to-home:hover{
+.image-back-to-home:hover{
     opacity:1;
     text-shadow: 0 0 .5rem whitesmoke;
 }
+
+
+
+.nav-banner-wrapper{
+    display: flex;
+    justify-content: space-between; /* container-level adjustment - horizontal */
+    align-items: center; /* container-level adjustment - vertical */
+    background-color: #BD9050;
+
+    /*border: 2pt dotted green;*/
+
+}
+
+.nav-back-to-home{
+    font-size: 1.5rem;
+    padding: .2rem;
+    color: whitesmoke;
+    margin: 4rem;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: rgba(152, 67, 62, 0.5);
+    border: #98433E;
+    border-radius: .15rem;
+
+    /*border: 2pt dotted turquoise;*/
+}
+
+.nav-back-to-home:hover{
+    box-shadow: 0rem 0rem .3rem .01rem whitesmoke;
+}
+
+/*.social-media-wrapper{
+I can't comprehend whether I'll need to wrap these icons or not
+}*/
+
+
+
+
+
+
+
 
 
 
@@ -231,8 +271,9 @@ img[src*="falling-bw"]{
     align-items:center; /*vertical centering of main body container*/
     margin: 4rem 4rem 2rem 4rem;
     overflow: hidden;
-    border: .2rem solid #333E3C;
+    border: .09rem solid lightgray;
     border-radius: 0rem;
+    box-shadow: 0rem 0rem .3rem .01rem #51666B;
 }
 
 .bio-image {
@@ -244,6 +285,7 @@ img[src*="falling-bw"]{
     max-height: 25rem;
     width: auto;
     border-radius: 0rem;
+    box-shadow: 0rem 0rem .3rem .01rem #51666B;
 }
 
 .bio-content {
@@ -257,6 +299,7 @@ img[src*="falling-bw"]{
     font-size: 1rem;
     border-left: 0.2rem solid #333E3C;
     padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 .bio-content h3{
@@ -284,11 +327,12 @@ I just need to add these two things to
     justify-content: center; /*horizontal centering of main body container*/
     align-items:center; /*vertical centering of main body container*/
     
-    border: 2pt dotted blue;
+    /*border: 2pt dotted blue;*/
 }
 
 .film-page-title{
     font-size: 3rem;
+    color: #333E3C;
 }
 
 .video-wrapper {
@@ -298,17 +342,25 @@ above the video(childB), but aligned left*/
     flex-direction: column; /*default is row, that's why row isn't defined for my other flex settings*/
     justify-content: center; /*horizontal centering of main body container*/
     align-items:center; /*vertical centering of main body container*/
-    border: 2pt dotted green;
     height: auto;
+
+    /*border: 2pt dotted green;*/
 }
 
 .video-title{
     align-self: flex-start; /*left align of the video's title*/
     font-size: 1.5rem;
+    color: #333E3C;
+
+    /*border: 2pt dotted orange;*/
 }
 
 .video-itself{
-    border: 2pt dotted yellow;
+    width: 100% !important;
+    height: auto !important;
+    box-shadow:
+    0rem 0rem .3rem .01rem #BD9050;
+    /*border: 2pt dotted red;*/
 }
 
 
