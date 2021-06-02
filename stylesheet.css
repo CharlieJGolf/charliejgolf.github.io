@@ -161,7 +161,7 @@ img[src*="falling-bw"]{
     display: flex;
     justify-content: center; /* container-level adjustment - horizontal */
     align-items: center; /* container-level adjustment - vertical */
-
+    border-bottom: .3rem solid #BD9050;
     background: #333E3C;
     /*background: linear-gradient(0deg, #b29671 0%, #d5d2cb 50%, #b29671 100%);*/
 
@@ -187,8 +187,8 @@ img[src*="falling-bw"]{
     background-position-y: center;
     background-size: cover;
     overflow: hidden; /*without hidden, the header had a big top gap/margin*/
-    /*box-shadow:
-        0rem 0rem .3rem .01rem #BD9050;*/
+    box-shadow:
+        0rem 0rem .3rem .01rem #BD9050;
     border-radius: .15rem;
     /*
     h-offset: positive=right side / neg=left side)
@@ -200,9 +200,7 @@ img[src*="falling-bw"]{
 }
 
 .back-to-home {  /* inherits the 3 flex styles from parent (.header) */
-    
     align-self: center;
-
     font-size: 5rem;  
     font-weight:lighter;
     font-variant: small-caps;
@@ -230,7 +228,7 @@ img[src*="falling-bw"]{
 .bio-container {
     display: flex;  /*same as saying, display: inline-flex*/
     justify-content: center; /*horizontal centering of main body container*/
-    align-items:center; /*vertical centering*/
+    align-items:center; /*vertical centering of main body container*/
     margin: 4rem 4rem 2rem 4rem;
     overflow: hidden;
     border: .2rem solid #333E3C;
@@ -278,7 +276,40 @@ I just need to add these two things to
 
 */
 
-/*film works body*/
+/*_____________film works body_____________*/
+
+.films-page-container {
+    display: flex;
+    flex-direction: column; /*default is row, that's why row isn't defined for my other flex settings*/
+    justify-content: center; /*horizontal centering of main body container*/
+    align-items:center; /*vertical centering of main body container*/
+    
+    border: 2pt dotted blue;
+}
+
+.film-page-title{
+    font-size: 3rem;
+}
+
+.video-wrapper {
+/*added this wrapper element so that the title (childA) isn't centered
+above the video(childB), but aligned left*/
+    display: flex;
+    flex-direction: column; /*default is row, that's why row isn't defined for my other flex settings*/
+    justify-content: center; /*horizontal centering of main body container*/
+    align-items:center; /*vertical centering of main body container*/
+    border: 2pt dotted green;
+    height: auto;
+}
+
+.video-title{
+    align-self: flex-start; /*left align of the video's title*/
+    font-size: 1.5rem;
+}
+
+.video-itself{
+    border: 2pt dotted yellow;
+}
 
 
 
