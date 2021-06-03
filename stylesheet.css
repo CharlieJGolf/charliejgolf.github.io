@@ -188,54 +188,51 @@ setting the .homepage-header-container, as the background image
     }
         
         .back-icon{
+            opacity: .6;
             /*border: 2pt dotted green;*/
 
         }
         .back-icon:hover{
-            box-shadow: 0rem 0rem .3rem .01rem whitesmoke;
-            border-radius: .15rem;
+            opacity: 1;
         }
 
         /*____text, back____*/
-        .txt-back-to-home {  /* inherits the 3 flex styles from parent (.header) */
+        .txt-back-to-home {
             align-self: center;
             margin: 1rem;
             font-size: 1.5rem;  
             font-weight:lighter;
             font-variant: small-caps;
-            text-shadow: 0 0 .5rem gray;
-            color: whitesmoke;
+            /*text-shadow: 0 0 .5rem gray;*/
+            color: #BD9050;
             letter-spacing: 1.2rem;
             background-color: transparent;
             opacity: 0.7;
             transition: 0.3s;
             text-decoration: none;
             cursor: pointer;
+            opacity: .6;
 
             /*border: 2pt dotted blue;*/
         }
 
         .txt-back-to-home:hover{
             opacity:1;
-            text-shadow: 0 0 .5rem whitesmoke;
         }
 
 
-
-
-
-/*____media icon____*/
+/*____media icosn____*/
 .social-media-wrapper{
     margin-right: 4rem;
 }
 
 .icon{
     margin: 1rem;
+    opacity: 0.6;
 }
 
 .icon:hover{
-    box-shadow: 0rem 0rem .3rem .01rem whitesmoke;
-    border-radius: .15rem;
+    opacity:1;
 }
 /*____media icon____*/
 
