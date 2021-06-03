@@ -201,10 +201,10 @@ setting the .homepage-header-container, as the background image
             align-self: center;
             margin: 1rem;
             font-size: 1.5rem;  
-            font-weight:lighter;
+            font-weight: bolder;
             font-variant: small-caps;
             /*text-shadow: 0 0 .5rem gray;*/
-            color: #BD9050;
+            color: #98433E;
             letter-spacing: 1.2rem;
             background-color: transparent;
             opacity: 0.7;
