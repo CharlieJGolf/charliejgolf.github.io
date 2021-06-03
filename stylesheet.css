@@ -161,77 +161,15 @@ setting the .homepage-header-container, as the background image
 */
 
 .homepage-header-container {
-    display: flex;
-    justify-content: center; /* container-level adjustment - horizontal */
-    align-items: flex-end; /* container-level adjustment - vertical */
-    /*border-bottom: .3rem solid #BD9050;*/
-
-    /*background: #333E3C; hiding for curiosity*/
-
-    /*this was in .header*/
     background-image: url(./metasandfade.png);
     background-position-x: center;
     background-position-y: center;
     background-size: cover;
     overflow: hidden;
-    /*this was in .header*/
-
-    /*adding this during curiosity*/
     height: 25rem;
-    /*adding this during curiosity*/
 
     /*border: 2pt dotted white;*/
 }
-
-.header {
-    display: flex;
-    justify-content: center; /* container-level adjustment - horizontal */
-    align-items: flex-end; /* container-level adjustment - vertical */
-    text-align: center;
-
-    /*margin: 1.5rem 3rem 1.5rem 3rem; /*top/bottom_left/right
-    padding-left: 6rem;
-    padding-right: 6rem;
-    padding-bottom: 1rem;
-    padding-top: 1rem;*/
-
-
- /*without hidden, the header had a big top gap/margin*/
-
-    /*box-shadow:
-        0rem 0rem .3rem .01rem #BD9050;
-    border-radius: .15rem;*/
-    /*
-    h-offset: positive=right side / neg=left side)
-    v-offset: positive=below / neg=above
-    blur: higher the number, the more blur
-    spread: positive increase size / neg decreases size */
-
-    /*border: 2pt dotted black;*/
-}
-
-.image-back-to-home {  /* inherits the 3 flex styles from parent (.header) */
-    align-self: flex-end;
-    font-size: 5rem;  
-    font-weight:lighter;
-    font-variant: small-caps;
-    text-shadow: 0 0 .5rem gray;
-    color: whitesmoke;
-    letter-spacing: 1.5rem;
-    background-color: transparent;
-    opacity: 0.7;
-    transition: 0.3s;
-    text-decoration: none;
-    cursor: pointer;
-
-    /*border: 2pt dotted blue;*/
-}
-
-.image-back-to-home:hover{
-    opacity:1;
-    text-shadow: 0 0 .5rem whitesmoke;
-}
-
 
 
 .nav-banner-wrapper{
@@ -240,22 +178,49 @@ setting the .homepage-header-container, as the background image
     align-items: center; /* container-level adjustment - vertical */
     background-color: #333E3C;
     border-top: .05rem solid whitesmoke;
-
     /*border: 2pt dotted green;*/
 }
 
-/*____back icon____*/
-.back-icon-wrapper{
-    margin-left: 4rem;
-}
-.back-icon{
-    margin: 1rem;
-}
-.back-icon:hover{
-    box-shadow: 0rem 0rem .3rem .01rem whitesmoke;
-    border-radius: .15rem;
-}
-/*____back icon____*/
+    /*____back icon____*/
+    .back-icon-wrapper{
+        margin-left: 4rem;
+        align-items: center; /* container-level adjustment - vertical */
+    }
+        
+        .back-icon{
+            /*border: 2pt dotted green;*/
+
+        }
+        .back-icon:hover{
+            box-shadow: 0rem 0rem .3rem .01rem whitesmoke;
+            border-radius: .15rem;
+        }
+
+        /*____text, back____*/
+        .txt-back-to-home {  /* inherits the 3 flex styles from parent (.header) */
+            align-self: center;
+            margin: 1rem;
+            font-size: 1.5rem;  
+            font-weight:lighter;
+            font-variant: small-caps;
+            text-shadow: 0 0 .5rem gray;
+            color: whitesmoke;
+            letter-spacing: 1.2rem;
+            background-color: transparent;
+            opacity: 0.7;
+            transition: 0.3s;
+            text-decoration: none;
+            cursor: pointer;
+
+            /*border: 2pt dotted blue;*/
+        }
+
+        .txt-back-to-home:hover{
+            opacity:1;
+            text-shadow: 0 0 .5rem whitesmoke;
+        }
+
+
 
 
 
