@@ -160,7 +160,7 @@ img[src*="falling-bw"]{
 setting the .homepage-header-container, as the background image 
 */
 
-.homepage-header-container {
+.header-container {
     background-image: url(./metasandfade.png);
     background-position-x: center;
     background-position-y: center;
