@@ -36,6 +36,7 @@
       </section>
     </section>
 
+
         <section class="Instagram">
             <h3><strong>Instagram</strong></h3>
                 <a href=https://www.instagram.com/mamikousuda/ target="_blank">Instagram</a>
@@ -47,15 +48,35 @@
         </section>
 
 
-    <form method="POST" name="contactform" action="https://formspree.io/f/xvodalzy">
-      Your Name: <input type="text" name=”name”>
-      Email Address: <input type="text" name="email">
-      Message: <textarea name="message"></textarea>
-      <input type="submit" value="Submit">
-    </form>
+        <section class="cards-wrapper">
+          <div class="card-grid-space">
+            <div class="title">Contact Mamiko</div>
+            <a class="card" style="--bg-img: url('mamiko-portrait.png');">
+              <div> 
 
+                <form class="contact-form" name="contactform" accept-charset="utf-8" action="https://formspree.io/f/xvodalzy" method="POST">
+        
+                  <section class="name box">
+                  Your Name: <input type="text" name="name" placeholder="First and Last" required="">
+                  </section>
+                
+                  <section class="email box">
+                  Email Address: <input type="text" name="email" placeholder="email@domain.com" required="">
+                  </section>
+                
+                  <section class="message box">
+                  Message: <textarea name="message" placeholder="Lets talk!" required=""></textarea>
+                  </section>
+                
+                  <section class="submit box">
+                  <input type="submit" value="Submit">
+                  </section>
+                
+                </form>
 
-          
+              </div>
+            </a>
+          </div>
+      </section>          
   </body>
-    
 </html>

@@ -3,7 +3,7 @@
 /* ----------  Core ---------- */
 
 :root {
-    /*--transition-time: 0.5s;*/
+    --transition-time: 0.5s;
   }
   
   
@@ -11,7 +11,7 @@
     box-sizing: border-box;
     font-family: "Open Sans", Verdana, Helvetica, Arial, sans-serif;
     font-weight: 300;
-    /*border: 2px dotted black;*/
+    border: 2px dotted black;
   }
 
 /*_________<body> for all pages__________*/
@@ -357,6 +357,189 @@ above the video(childB), but aligned left*/
     0rem 0rem .3rem .01rem #BD9050;
     /*border: 2pt dotted red;*/
 }
+
+
+
+/* _______ Connect page, body ________*/
+
+
+
+.contact-form{
+    height: auto;
+    padding: .5rem;
+    margin: 3rem;
+}
+
+.box{
+    margin: .5rem;
+}
+
+a {
+    color: inherit; /*inherit from what parent.. find out*/
+}
+
+
+
+.card-grid-space .title {
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 1.2rem;
+  margin-left: 1rem;
+  color: #333E3C;
+  border: 2px dotted blue;
+}
+
+  
+.cards-wrapper {
+    display: grid; /*Defines the element as a grid container and establishes a new grid formatting context for its contents - https://css-tricks.com/snippets/css/complete-guide-grid/*/
+    justify-content: center; /* horizontal align */
+    align-items: center; /* vertical align */
+    grid-template-columns: 1fr; /*set each item to one third the width of the grid container*/
+    /*grid-gap: 4rem; 1rem=16px (aka base / browser default) 18px = 1.125rem / 20px = 1.25rem / 24px = 1.5rem etc.*/
+    padding: 4rem; /*rem is relative to browers/html/root/base. whereas em is relative to is nearest parent.*/
+    margin: 0 auto;
+    width: max-content; /*this means that the content will not wrap at all even if it causes overflows*/
+
+    border: 2px dotted red;
+}
+
+.card-grid-space{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* horizontal align */
+    align-items: center; /* vertical align */
+
+    border: 2px dotted yellow;
+}
+  
+.card {
+    font-family: "Open Sans", Verdana, Helvetica, Arial, sans-serif;
+    --bg-filter-opacity: 0.5;
+    background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img);
+    height: 20em;
+    width: 15em;
+    font-size: 1.5em;
+    color: #A4A4A4;
+    border-radius: 0.1rem;
+    padding: 0.5em; /*spacing between content and borders*/
+    /*margin: 2em;  <<this was commented out, from the template*/
+
+    display: flex; 
+    align-items: flex-end; /* vertical align */
+    background-size: cover; 
+    background-position: center;
+    box-shadow: 0 0 5em -1em #A4A4A4;
+    transition: all, var(--transition-time);
+    position: relative;  /*here goes position.. pay attention how this interacts with the other elements*/
+    overflow: hidden;
+    border: 0.2rem solid #999999;
+    text-decoration: none;
+    
+    border: 2px dotted turquoise;
+}
+  
+.card:hover {
+    transform: rotate(0);
+}
+  
+.card .box {
+    font-size: 0.75em;
+    font-family: "Open Sans", Verdana, Helvetica, Arial, sans-serif;
+    margin-top: 0.5em;
+    line-height: 2em;
+}
+  
+.card:before, .card:after {
+    content: '';
+    transform: scale(0); /*The scale() method increases or decreases the size of an element (according to the parameters given for the width and height).*/
+    transform-origin: left; /*starts at the top left*/
+    border-radius: 50%;
+    position: absolute;  /*here goes position again - card position, is relative*/
+    left: -50%;
+    top: -50%;
+    z-index: -5;
+    transition: all, var(--transition-time);
+    transition-timing-function: ease-in-out;
+}
+  
+.card:before {
+    background: #ddd;
+    width: 250%;
+    height: 250%;
+}
+  
+.card:after {
+    background: #333E3C;
+    width: 200%;
+    height: 200%;
+}
+  
+.card:hover {
+    color: var(--color);
+}
+    
+.card:hover:before, .card:hover:after {
+    transform: scale(1);
+}
+
+@media screen and (max-width: 1285px) {
+    .cards-wrapper {
+      grid-template-columns: 1fr;  /*defined in the cards-wrapper element*/
+    }  /*this is 1fr 1fr, is why, when looking at, from iphone, you get two cards, then the third is created on a second row. there's probably a way to say, if 2 rows, make the card on second row, centered*/
+    .header {
+      height:auto;
+    }
+}
+  
+@media screen and (max-width: 900px) {
+    .cards-wrapper {
+      grid-template-columns: 1fr;
+    }
+    .header {
+      position: relative;
+      font-size: 1rem;
+      font-weight: normal;
+      text-align: center;
+      vertical-align: bottom;
+      color: #E4E4E4;
+      width: auto;
+      justify-content: center;
+      height: auto;
+    }
+    .card-grid-space .title {
+      margin-left: 0;
+      text-align: center;
+    }
+}
+  
+@media screen and (max-width: 500px) {
+    .cards-wrapper {
+      padding: 4rem 2rem;
+    }
+    .card {
+      max-width: calc(100vw - 4rem);
+    }
+    .header {
+      height:auto;
+    }
+}
+  
+@media screen and (max-width: 450px) {
+    .header {
+      display: block;
+      text-align: center;
+      height: auto;
+    }
+    .header h1 {
+      margin: 0;
+    }
+}
+
+
+
+
+
+
 
 
 
