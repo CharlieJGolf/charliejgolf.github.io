@@ -156,9 +156,6 @@ img[src*="falling-bw"]{
 
 /*_______________ the re-useable header _____________*/
 
-/* curiosity updates:
-setting the .homepage-header-container, as the background image 
-*/
 
 .header-container {
     background-image: url(./metasandfade.png);
@@ -174,10 +171,13 @@ setting the .homepage-header-container, as the background image
 
 .nav-banner-wrapper{
     display: flex;
+    position:sticky;
+    top: 0;
     justify-content: space-between; /* container-level adjustment - horizontal */
     align-items: center; /* container-level adjustment - vertical */
     background-color: #333E3C;
     border-top: .05rem solid whitesmoke;
+    z-index: 2;
     /*border: 2pt dotted green;*/
 }
 
