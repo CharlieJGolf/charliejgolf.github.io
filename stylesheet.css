@@ -1,10 +1,44 @@
 
 
-/* ---------style for index ----------*/
+/* ----------  Core ---------- */
+
+:root {
+    /*--transition-time: 0.5s;*/
+  }
+  
+  
+  * {
+    box-sizing: border-box;
+    font-family: "Open Sans", Verdana, Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    /*border: 2px dotted black;*/
+  }
+
+/*_________<body> for all pages__________*/
+
+.allbutlandingpage{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /*height: 100vh = 100% of the viewport height. height: 100% = 100% of the parent's element height. The viewport units are relative units, which means that they do not have an objective measurement*/
+    background-image: url(./round.png);
+    /*background: #b29671;
+    background: linear-gradient(0deg, #b29671 0%, #d5d2cb 50%, #b29671 100%);*/
+  }
+  
+  .landingpagebody{
+      background: whitesmoke;
+      margin: 0;
+      padding: 0;
+  }
+
+
+/* ---------style for index / landing page ----------*/
 .container{
-    position: relative;
+    display: flex;
+    overflow: hidden;
     width: 100%;
     height: auto;
+    /*border: 2pt dotted green;*/
 }
 
 img[src*="falling-bw"]{
@@ -13,10 +47,8 @@ img[src*="falling-bw"]{
     /*doesn't crop any of the image but as a result of preserving scale, it produces left and right margins*/
     height:auto;
     margin:auto;
-    box-shadow: 0rem 1rem 1rem -1rem #505050;
+    /*box-shadow: 0rem 1rem 1rem -1rem #505050;*/
     border-radius: .3rem;
-
-
 }
 
 .land-to-home {
@@ -31,9 +63,10 @@ img[src*="falling-bw"]{
     background-color: #98433E;
     border: #98433E;
     border-radius: 0.4rem;
-    color: white;
+    color: whitesmoke;
     z-index:1;
     font-size: 2rem;
+    font-family: "Advent Pro", Verdana, Helvetica, Arial, sans-serif;
     opacity: 0.6;
     transition: 0.3s;
     display: inline-block;
@@ -46,35 +79,9 @@ img[src*="falling-bw"]{
 }
 
 
-/* ---------- Core of all ---------- */
-
-:root {
-  /*--transition-time: 0.5s;*/
-}
 
 
-* {
-  box-sizing: border-box;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  /*border: 2px dotted black;*/
-}
 
-/*_________body__________*/
-
-.allbutlandingpage{
-  margin: 0;
-  padding: 0;
-  min-height: 100vh; /*height: 100vh = 100% of the viewport height. height: 100% = 100% of the parent's element height. The viewport units are relative units, which means that they do not have an objective measurement*/
-  background-image: url(./round.png);
-  /*background: #b29671;
-  background: linear-gradient(0deg, #b29671 0%, #d5d2cb 50%, #b29671 100%);*/
-}
-
-.landingpagebody{
-    background: whitesmoke;
-    margin: 0;
-    padding: 0;
-}
 
 
 /* -------------- homepage body  ------------ */
@@ -98,9 +105,10 @@ img[src*="falling-bw"]{
 }
   
 .pagenav {
-    color: white;
+    color: whitesmoke;
     font-weight: lighter;
     font-variant: small-caps;
+    font-family: "Advent Pro", Verdana, Geneva, Tahoma, sans-serif;
     letter-spacing: .8rem;
     font-size: 2.5rem;
     text-decoration: none;
@@ -109,7 +117,7 @@ img[src*="falling-bw"]{
 }
 
 .pagenav:hover {
-    color: white;
+    color: whitesmoke;
     opacity: 1;
     text-shadow: 0 0 .5rem gray;
   }
@@ -144,7 +152,6 @@ img[src*="falling-bw"]{
   
 #film-works {
     background-image: url(./mamiko-floral-dancing.png);
-
 }
   
 #connect {
@@ -157,7 +164,7 @@ img[src*="falling-bw"]{
 /*_______________ the re-useable header _____________*/
 
 
-.header-container {
+.header-image {
     background-image: url(./metasandfade.png);
     background-position-x: center;
     background-position-y: center;
@@ -187,11 +194,11 @@ img[src*="falling-bw"]{
         align-items: center; /* container-level adjustment - vertical */
     }
         
-        .back-icon{
+        .back-icon {
             opacity: .6;
             /*border: 2pt dotted green;*/
-
         }
+
         .back-icon:hover{
             opacity: 1;
         }
@@ -199,19 +206,21 @@ img[src*="falling-bw"]{
         /*____text, back____*/
         .txt-back-to-home {
             align-self: center;
+            text-align: center;
             margin: 1rem;
-            font-size: 1.5rem;  
-            font-weight: bolder;
-            font-variant: small-caps;
-            /*text-shadow: 0 0 .5rem gray;*/
-            color: #98433E;
+            color: whitesmoke;
             letter-spacing: 1.2rem;
-            background-color: transparent;
-            opacity: 0.7;
+
+            font-family: "Advent Pro", Verdana, Helvetica, Arial, sans-serif;
+            font-size: 1.8rem;  
+            font-weight: bolder;
+
             transition: 0.3s;
             text-decoration: none;
+            opacity: 0.6;
             cursor: pointer;
-            opacity: .6;
+
+
 
             /*border: 2pt dotted blue;*/
         }
@@ -221,7 +230,7 @@ img[src*="falling-bw"]{
         }
 
 
-/*____media icosn____*/
+/*____media icon____*/
 .social-media-wrapper{
     margin-right: 4rem;
 }
@@ -243,6 +252,16 @@ img[src*="falling-bw"]{
 
 /*__________________bio page body:_____________________*/
 
+.bio-page-title{
+    display: flex;
+    justify-content: center; /*horizontal centering of main body container*/
+    align-items:center; /*vertical centering of main body container*/
+    font-weight: bolder;
+    font-size: 5rem;
+    color: #333E3C;
+    font-family: "Advent Pro", Verdana, Helvetica, Arial, sans-serif;
+}
+
 .bio-container {
     display: flex;  /*same as saying, display: inline-flex*/
     justify-content: center; /*horizontal centering of main body container*/
@@ -260,22 +279,15 @@ img[src*="falling-bw"]{
 }
 
 .bio-image img {
-    max-height: 25rem;
+    height: 25rem;
     width: auto;
     border-radius: 0rem;
     box-shadow: 0rem 0rem .3rem .01rem #51666B;
-    filter: grayscale(70%);
 }
 
 .bio-content {
     text-align: left;
     padding-left: 2rem;
-}
-
-.bio-content h3{
-    font-weight: bolder;
-    font-size: 1.75rem;
-    color: #333E3C;
 }
 
 .bio-content p{
@@ -311,8 +323,10 @@ I just need to add these two things to
 }
 
 .film-page-title{
-    font-size: 3rem;
+    font-size: 5rem;
     color: #333E3C;
+    font-family: "Advent Pro", Verdana, Helvetica, Arial, sans-serif;
+    /*border: 2pt dotted green;*/
 }
 
 .video-wrapper {
