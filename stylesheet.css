@@ -412,31 +412,13 @@ above the video(childB), but aligned left*/
       animation: moveGradient 8s alternate infinite;
     }
 
-  
   @keyframes moveGradient {
     50% {
       background-position: 100% 50%;
     }
   }
   
-  .grabtext{ /*flex only applies to direct parent so needed to include grab, so the same wrap settings can apply*/
-    display: flex;
-    justify-content: center; /* horizontal align */
-    align-items: center; /* vertical align */
-    text-align: center;
-    padding-right: 1rem;
-    padding-left: 1rem;
-  }
 
-
-  .media-message{
-    /*height: 50vh;   ....who knows*/
-    display: flex;
-    flex-direction: row; /*explicit*/
-    justify-content: center;
-    align-items: center;
-    margin: 3rem;
-}
 
   
 .cards-wrapper {
@@ -559,6 +541,25 @@ above the video(childB), but aligned left*/
     
 .card:hover:before, .card:hover:after {
     transform: scale(1);
+}
+
+.grabtext{ /*flex only applies to direct parent so needed to include grab, so the same wrap settings can apply*/
+    display: flex;
+    justify-content: center; /* horizontal align */
+    align-items: center; /* vertical align */
+    text-align: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+
+  .media-message{
+    /*height: 50vh;   ....who knows*/
+    display: flex;
+    flex-direction: row; /*explicit*/
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
 }
 
 @media screen and (max-width: 1285px) {
