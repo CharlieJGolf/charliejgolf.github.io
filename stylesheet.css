@@ -3,7 +3,7 @@
 /* ----------  Core ---------- */
 
 :root {
-    --transition-time: 0.5s;
+    --transition-time: 1s;
   }
   
   
@@ -11,7 +11,7 @@
     box-sizing: border-box;
     font-family: "Open Sans", Verdana, Helvetica, Arial, sans-serif;
     font-weight: 300;
-    border: 2px dotted black;
+    /*border: 2px dotted black;*/
   }
 
 /*_________<body> for all pages__________*/
@@ -363,30 +363,96 @@ above the video(childB), but aligned left*/
 /* _______ Connect page, body ________*/
 
 
-
-.contact-form{
-    height: auto;
-    padding: .5rem;
-    margin: 3rem;
+.top-body-wrap{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.box{
-    margin: .5rem;
-}
+.connect-media-container {
+    --border-width: 3px;
+  
+    position: relative;
+    display: flex;
+    flex-direction: column; /* child elements stacked vertically */
+    justify-content: center; /* horizontal align */
+    align-items: center; /* vertical align */
+    background-color: whitesmoke;
+    /*--bg-filter-opacity: 200;
+    background-image: linear-gradient(rgba(245, 245, 245, var(--bg-filter-opacity)));*/
+    font-family: Lato, sans-serif;
+    font-size: 1rem;
+    color: black;
+    border-radius: var(--border-width);
 
-a {
-    color: inherit; /*inherit from what parent.. find out*/
 }
+  
+    .connect-media-container::after {
+      position: absolute;
+      content: "";
+      top: calc(-1 * var(--border-width));
+      left: calc(-1 * var(--border-width));
+      z-index: -1;
+      width: calc(100% + var(--border-width) * 2);
+      height: calc(100% + var(--border-width) * 2);
+      background: linear-gradient(
+        60deg,
+        #BD9050,
+        #51666B,
+        #B29671,
+        #98433E,
+        #556b51,
+        #D5D2CB,
+        #818294);
+      background-size: 300% 300%;
+      background-position: 0 50%;
+      border-radius: calc(2 * var(--border-width));
+      animation: moveGradient 8s alternate infinite;
+    }
+
+    
+    /*60deg,
+    #BD9050,
+    #B29671,
+    #98433E,
+    #D5D2CB,
+    #51666B,
+    #51666B,
+    #51666B,
+    #818294);*/
+
+  
+  @keyframes moveGradient {
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  .txturl{ /*flex only applies to direct parent so needed to include grab, so the same wrap settings can apply*/
+    display: flex;
+    flex-direction: column; /* child elements stacked vertically */
+    justify-content: center; /* horizontal align */
+    align-items: center; /* vertical align */
+    text-align: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+
+
+
 
 
 
 .card-grid-space .title {
   text-align: center;
-  font-size: 3em;
+  font-size: 2rem;
   margin-bottom: 1.2rem;
   margin-left: 1rem;
   color: #333E3C;
-  border: 2px dotted blue;
+  /*border: 2px dotted blue;*/
 }
 
   
@@ -400,7 +466,7 @@ a {
     margin: 0 auto;
     width: max-content; /*this means that the content will not wrap at all even if it causes overflows*/
 
-    border: 2px dotted red;
+    /*border: 2px dotted red;*/
 }
 
 .card-grid-space{
@@ -409,25 +475,23 @@ a {
     justify-content: center; /* horizontal align */
     align-items: center; /* vertical align */
 
-    border: 2px dotted yellow;
+    /*border: 2px dotted yellow;*/
 }
   
 .card {
-    font-family: "Open Sans", Verdana, Helvetica, Arial, sans-serif;
-    --bg-filter-opacity: 0.5;
+    --bg-filter-opacity: 0.15;
     background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img);
     height: 20em;
     width: 15em;
     font-size: 1.5em;
-    color: #A4A4A4;
     border-radius: 0.1rem;
     padding: 0.5em; /*spacing between content and borders*/
-    /*margin: 2em;  <<this was commented out, from the template*/
 
     display: flex; 
     align-items: flex-end; /* vertical align */
     background-size: cover; 
-    background-position: center;
+    background-position-x: center;
+    background-position-y: top;
     box-shadow: 0 0 5em -1em #A4A4A4;
     transition: all, var(--transition-time);
     position: relative;  /*here goes position.. pay attention how this interacts with the other elements*/
@@ -435,16 +499,30 @@ a {
     border: 0.2rem solid #999999;
     text-decoration: none;
     
-    border: 2px dotted turquoise;
+    /*border: 2px dotted turquoise;*/
 }
   
 .card:hover {
     transform: rotate(0);
 }
   
+.contact-form{
+    height: auto;
+    padding: .5rem;
+    margin: 3rem;
+    /*border: 2px dotted cornflowerblue;*/
+}
+
+.box{ /*form boxes themselves*/
+    margin: .5rem;
+    color: whitesmoke;
+    text-align: right;
+}
+
 .card .box {
     font-size: 0.75em;
     font-family: "Open Sans", Verdana, Helvetica, Arial, sans-serif;
+    font-weight: lighter;
     margin-top: 0.5em;
     line-height: 2em;
 }
@@ -452,8 +530,8 @@ a {
 .card:before, .card:after {
     content: '';
     transform: scale(0); /*The scale() method increases or decreases the size of an element (according to the parameters given for the width and height).*/
-    transform-origin: left; /*starts at the top left*/
-    border-radius: 50%;
+    transform-origin: top left; /*starts at the top left*/
+    border-radius: 1%;
     position: absolute;  /*here goes position again - card position, is relative*/
     left: -50%;
     top: -50%;
@@ -463,7 +541,7 @@ a {
 }
   
 .card:before {
-    background: #ddd;
+    background: #333E3C;
     width: 250%;
     height: 250%;
 }
@@ -473,7 +551,8 @@ a {
     width: 200%;
     height: 200%;
 }
-  
+
+
 .card:hover {
     color: var(--color);
 }
