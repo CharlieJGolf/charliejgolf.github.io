@@ -411,7 +411,6 @@ above the video(childB), but aligned left*/
         #51666B,
         #B29671,
         #98433E,
-        #556b51,
         #D5D2CB,
         #818294);
       background-size: 300% 300%;
@@ -454,7 +453,6 @@ above the video(childB), but aligned left*/
 .card-grid-space .title {
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
     font-size: 2rem;
     margin-bottom: 1.2rem;
     /*margin-left: 1rem;*/
