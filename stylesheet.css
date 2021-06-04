@@ -11,7 +11,7 @@
     box-sizing: border-box;
     font-family: "Open Sans", Verdana, Helvetica, Arial, sans-serif;
     font-weight: 300;
-    /*border: 2px dotted black;*/
+    border: 2px dotted black;
   }
 
 /*_________<body> for all pages__________*/
@@ -459,6 +459,7 @@ above the video(childB), but aligned left*/
     margin-right: 1rem;
     margin-bottom: .5rem;
     margin-left: 1rem;
+
     /*margin-left: 1rem;*/
     color: #333E3C;
     /*border: 2px dotted blue;*/
@@ -479,6 +480,7 @@ above the video(childB), but aligned left*/
     height: 20em;
     width: 15em;
     font-size: 1.5em;
+    font-weight: bolder;
     border-radius: 0.1rem;
     padding: 0.5em; /*spacing between content and borders*/
 
@@ -492,6 +494,10 @@ above the video(childB), but aligned left*/
     position: relative;  /*here goes position.. pay attention how this interacts with the other elements*/
     overflow: hidden;
     border: 0.2rem solid whitesmoke;
+    
+    border-radius: 0rem;
+    box-shadow: 0rem 0rem .3rem .01rem #51666B;
+
     text-decoration: none;
     
     /*border: 2px dotted turquoise;*/
