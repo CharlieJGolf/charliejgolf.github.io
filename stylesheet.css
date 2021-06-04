@@ -362,8 +362,16 @@ above the video(childB), but aligned left*/
 
 /* _______ Connect page, body ________*/
 
+.bodywrap{
+    display: flex;
+    flex-direction: row; /*explicit (this is default )*/
+    flex-wrap: wrap; /*wrapping item a & b when screen shrinks*/
+    justify-content: center; 
+    align-items: center;
+    /*border: 2px dotted blue;*/
+}
 
-.top-body-wrap{
+.media-message{
     height: 50vh;
     display: flex;
     flex-direction: column;
@@ -372,8 +380,8 @@ above the video(childB), but aligned left*/
 }
 
 .connect-media-container {
-    --border-width: 3px;
-  
+    --border-width: .5rem;
+    border-radius: .5rem;
     position: relative;
     display: flex;
     flex-direction: column; /* child elements stacked vertically */
@@ -419,9 +427,8 @@ above the video(childB), but aligned left*/
     }
   }
   
-  .txturl{ /*flex only applies to direct parent so needed to include grab, so the same wrap settings can apply*/
+  .grabtext{ /*flex only applies to direct parent so needed to include grab, so the same wrap settings can apply*/
     display: flex;
-    flex-direction: column; /* child elements stacked vertically */
     justify-content: center; /* horizontal align */
     align-items: center; /* vertical align */
     text-align: center;
@@ -429,20 +436,6 @@ above the video(childB), but aligned left*/
     padding-left: 1rem;
   }
 
-
-
-
-
-
-
-.card-grid-space .title {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 1.2rem;
-  margin-left: 1rem;
-  color: #333E3C;
-  /*border: 2px dotted blue;*/
-}
 
   
 .cards-wrapper {
@@ -458,14 +451,25 @@ above the video(childB), but aligned left*/
     /*border: 2px dotted red;*/
 }
 
-.card-grid-space{
+.card-grid-space .title {
     display: flex;
-    flex-direction: column;
-    justify-content: center; /* horizontal align */
-    align-items: center; /* vertical align */
-
-    /*border: 2px dotted yellow;*/
-}
+    flex-wrap: wrap;
+    justify-content: left;
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    /*margin-left: 1rem;*/
+    color: #333E3C;
+    /*border: 2px dotted blue;*/
+  }
+  
+  .card-grid-space{
+      display: flex;
+      flex-direction: column;
+      justify-content: left; /* horizontal align */
+      align-items: center; /* vertical align */
+  
+      /*border: 2px dotted black;*/
+  }
   
 .card {
     --bg-filter-opacity: 0.15;
@@ -485,7 +489,7 @@ above the video(childB), but aligned left*/
     transition: all, var(--transition-time);
     position: relative;  /*here goes position.. pay attention how this interacts with the other elements*/
     overflow: hidden;
-    border: 0.2rem solid #999999;
+    border: 0.2rem solid whitesmoke;
     text-decoration: none;
     
     /*border: 2px dotted turquoise;*/
