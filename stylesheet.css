@@ -367,7 +367,7 @@ above the video(childB), but aligned left*/
     flex-direction: row; /*explicit (this is default )*/
     flex-wrap: wrap; /*wrapping item a & b when screen shrinks*/
     justify-content: center; 
-    align-items: center;
+    align-items: top;
     /*border: 2px dotted blue;*/
 }
 
