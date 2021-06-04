@@ -371,13 +371,6 @@ above the video(childB), but aligned left*/
     /*border: 2px dotted blue;*/
 }
 
-.media-message{
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
 .connect-media-container {
     --border-width: .5rem;
@@ -436,6 +429,15 @@ above the video(childB), but aligned left*/
   }
 
 
+  .media-message{
+    /*height: 50vh;   ....who knows*/
+    display: flex;
+    flex-direction: row; /*explicit*/
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+}
+
   
 .cards-wrapper {
     display: grid; /*Defines the element as a grid container and establishes a new grid formatting context for its contents - https://css-tricks.com/snippets/css/complete-guide-grid/*/
@@ -443,8 +445,7 @@ above the video(childB), but aligned left*/
     align-items: center; /* vertical align */
     grid-template-columns: 1fr; /*set each item to one third the width of the grid container*/
     /*grid-gap: 4rem; 1rem=16px (aka base / browser default) 18px = 1.125rem / 20px = 1.25rem / 24px = 1.5rem etc.*/
-    padding: 4rem; /*rem is relative to browers/html/root/base. whereas em is relative to is nearest parent.*/
-    margin: 0 auto;
+    margin: 2rem auto;
     width: max-content; /*this means that the content will not wrap at all even if it causes overflows*/
 
     /*border: 2px dotted red;*/
@@ -454,7 +455,10 @@ above the video(childB), but aligned left*/
     display: flex;
     flex-wrap: wrap;
     font-size: 2rem;
-    margin-bottom: 1.2rem;
+    margin-top: 2rem;
+    margin-right: 1rem;
+    margin-bottom: .5rem;
+    margin-left: 1rem;
     /*margin-left: 1rem;*/
     color: #333E3C;
     /*border: 2px dotted blue;*/
