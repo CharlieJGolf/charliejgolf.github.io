@@ -382,10 +382,10 @@ above the video(childB), but aligned left*/
     background-color: whitesmoke;
     /*--bg-filter-opacity: 200;
     background-image: linear-gradient(rgba(245, 245, 245, var(--bg-filter-opacity)));*/
-    font-family: Lato, sans-serif;
     font-size: 1rem;
-    color: black;
-    border-radius: var(--border-width);
+    font-family: "Open Sans", Verdana, Helvetica, Arial, sans-serif;
+    color: #333E3C;
+    /*border-radius: var(--border-width);*/
 
 }
   
@@ -408,20 +408,9 @@ above the video(childB), but aligned left*/
         #818294);
       background-size: 300% 300%;
       background-position: 0 50%;
-      border-radius: calc(2 * var(--border-width));
+      /*border-radius: calc(2 * var(--border-width));*/
       animation: moveGradient 8s alternate infinite;
     }
-
-    
-    /*60deg,
-    #BD9050,
-    #B29671,
-    #98433E,
-    #D5D2CB,
-    #51666B,
-    #51666B,
-    #51666B,
-    #818294);*/
 
   
   @keyframes moveGradient {
