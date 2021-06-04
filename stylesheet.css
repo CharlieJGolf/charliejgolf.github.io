@@ -3,7 +3,7 @@
 /* ----------  Core ---------- */
 
 :root {
-    --transition-time: 1s;
+    --transition-time: .8s;
   }
   
   
@@ -475,10 +475,8 @@ above the video(childB), but aligned left*/
     position: relative;  /*here goes position.. pay attention how this interacts with the other elements*/
     overflow: hidden;
     border: 0.2rem solid whitesmoke;
-    
     border-radius: 0rem;
     box-shadow: 0rem 0rem .3rem .01rem #51666B;
-
     text-decoration: none;
     
     /*border: 2px dotted turquoise;*/
@@ -533,7 +531,6 @@ above the video(childB), but aligned left*/
     width: 200%;
     height: 200%;
 }
-
 
 .card:hover {
     color: var(--color);
