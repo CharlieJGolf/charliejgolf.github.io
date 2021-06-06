@@ -14,7 +14,14 @@
     /*border: 2px dotted black;*/
   }
 
-/*_________<body> for all pages__________*/
+/*_________<body> for landing pages & other for all others__________*/
+
+.landingpagebody{
+    background: whitesmoke;
+    margin: 0;
+    padding: 0;
+    viewport-fit: ;
+}
 
 .allbutlandingpage{
     margin: 0;
@@ -24,12 +31,7 @@
     /*background: #b29671;
     background: linear-gradient(0deg, #b29671 0%, #d5d2cb 50%, #b29671 100%);*/
   }
-  
-  .landingpagebody{
-      background: whitesmoke;
-      margin: 0;
-      padding: 0;
-  }
+
 
 
 /* ---------style for index / landing page ----------*/
@@ -626,10 +628,32 @@ above the video(childB), but aligned left*/
 
 
 
-/*________      .__.                 
- /  _____/______|__| _____   _____  
-/   \  __\_  __ \  |/     \ /     \ 
-\    \_\  \  | \/  |  Y Y  \  Y Y  \
- \______  /__|  |__|__|_|  /__|_|  /
-        \/               \/      \/
+/*
+     ________      .__.                 
+    /  _____/______|__| _____   _____  
+   /   \  __\_  __ \  |/     \ /     \ 
+   \    \_\  \  | \/  |  Y Y  \  Y Y  \
+    \______  /__|  |__|__|_|  /__|_|  /
+           \/               \/      \/
+                          _
+                        .' `'.__
+                       /      \ `'"-,
+      .-''''--...__..-/ .     |      \
+    .'               ; :'     '.  a   |
+   /                 | :.       \     =\
+  ;                   \':.      /  ,-.__;.-;`
+ /|     .              '--._   /-.7`._..-;`
+; |       '                |`-'      \  =|
+|/\        .   -' /     /  ;         |  =/
+(( ;.       ,_  .:|     | /     /\   | =|
+ ) / `\     | `""`;     / |    | /   / =/
+   | ::|    |      \    \ \    \ `--' =/
+  /  '/\    /       )    |/     `-...-`
+ /    | |  `\    /-'    /;
+ \  ,,/ |    \   D    .'  \
+  `""`   \  nnh  D_.-'L__nnh
+            `"""`
+
+http://www.lastdaysofivory.com/ | https://biglife.org/donate/
+
 */
