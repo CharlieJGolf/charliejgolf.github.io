@@ -36,14 +36,14 @@
 .container{
     display: flex;
     overflow: hidden;
-    width: 100%;
-    height: auto;
     /*border: 2pt dotted green;*/
 }
 
-img[src*="falling-bw"]{
+img[src*="landingpage-img"]{
     position: absolute;
-    object-fit: contain;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
     /*doesn't crop any of the image but as a result of preserving scale, it produces left and right margins*/
     height:auto;
     margin:auto;
@@ -350,7 +350,7 @@ above the video(childB), but aligned left*/
     /*border: 2pt dotted orange;*/
 }
 
-.video-itself{
+.video-itself{  
     width: 100% !important;
     height: auto !important;
     box-shadow:
@@ -358,6 +358,11 @@ above the video(childB), but aligned left*/
     /*border: 2pt dotted red;*/
 }
 
+/*
+> replace with the trailer version
+> other video: https://www.youtube.com/watch?v=sF69v23xttU
+> her dance reel: https://www.youtube.com/watch?v=5qCE_1mmcdI
+*/
 
 
 /* _______ Connect page, body ________*/
@@ -436,7 +441,8 @@ above the video(childB), but aligned left*/
 .card-grid-space .title {
     display: flex;
     flex-wrap: wrap;
-    font-size: 2rem;
+    font-size: 5rem;
+    font-family: "Advent Pro", Verdana, Helvetica, Arial, sans-serif;
     margin-top: 2rem;
     margin-right: 1rem;
     margin-bottom: .5rem;
@@ -548,7 +554,6 @@ above the video(childB), but aligned left*/
     padding-right: 1rem;
     padding-left: 1rem;
   }
-
 
   .media-message{
     /*height: 50vh;   ....who knows*/
