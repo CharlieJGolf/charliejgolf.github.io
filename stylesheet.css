@@ -11,17 +11,15 @@
     box-sizing: border-box;
     font-family: "Open Sans", Verdana, Helvetica, Arial, sans-serif;
     font-weight: 300;
+
     /*border: 2px dotted black;*/
   }
 
+
+
 /*_________<body> for landing pages & other for all others__________*/
 
-.landingpagebody{
-    background: whitesmoke;
-    margin: 0;
-    padding: 0;
-    viewport-fit: ;
-}
+
 
 .allbutlandingpage{
     margin: 0;
@@ -34,55 +32,125 @@
 
 
 
-/* ---------style for index / landing page ----------*/
-.container{
+/* ---------style for landing page (index) ----------*/
+
+.landingpage{
+    width:100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+
+.land-pg-nav{
     display: flex;
-    overflow: hidden;
-    /*border: 2pt dotted green;*/
-}
-
-img[src*="landingpage-img"]{
-    position: absolute;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    /*doesn't crop any of the image but as a result of preserving scale, it produces left and right margins*/
-    height:auto;
-    margin:auto;
-    /*box-shadow: 0rem 1rem 1rem -1rem #505050;*/
-    border-radius: .3rem;
-}
-
-.land-to-home {
     position:fixed;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 18rem;
-    height: 4rem;
-    text-align: center;
-    padding-top: .9rem;
-    background-color: #98433E;
-    border: #98433E;
-    border-radius: 0.4rem;
-    color: whitesmoke;
-    z-index:1;
-    font-size: 2rem;
-    font-family: "Advent Pro", Verdana, Helvetica, Arial, sans-serif;
-    opacity: 0.6;
-    transition: 0.3s;
-    display: inline-block;
-    text-decoration: none;
-    cursor: pointer;
+    background-image: url(./round.png);
+    top: 0;
+    margin: 3rem;
+    z-index: 3;
+    /*border: 2pt dotted green;*/
+    justify-content: center; /* container-level adjustment - horizontal */
+    align-items: center; /* container-level adjustment - vertical */
+    flex-direction: column;
+    border-radius: .3rem;
+    box-shadow: 0rem 0rem .3rem .05rem #51666B;
 }
 
-.land-to-home:hover{
+/*____text, fwd____*/
+.txt-to-home {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+    color: #333E3C;
+    letter-spacing: 1.2rem;
+    font-family: "Advent Pro", Verdana, Helvetica, Arial, sans-serif;
+    font-size: 1.8rem;  
+    font-weight: lighter;
+    transition: 0.3s;
+    text-decoration: none;
+    opacity: 0.6;
+    cursor: pointer;
+    /*border: 2pt dotted blue;*/
+}
+
+.txt-to-home:hover{
     opacity:1;
 }
 
+#video-bg{
+    width:100%;
+    height: auto;
+    position:fixed;
+    vertical-align: middle;
+    opacity: .8;
+    z-index: -1;
+}
 
+/* 
+https://redstapler.co/responsive-css-video-background/
+The first media query I’m going to add is when the screen is too wide. We need to keep the width to 100% and scale the height. We can achieve this by using min-aspect-ratio 16/9 */
+@media (min-aspect-ratio: 16/9) {
+    #videoBG {
+        width:100%;
+        height: auto;
+    }
+}
+/*vice versa when the screen ratio is below 16/9*/
+@media (max-aspect-ratio: 16/9) {
+    #videoBG { 
+        width:auto;
+        height: 100%;
+        z-index: 1;
+    }
+    .land-pg-nav{
+        margin:1rem;
+    }
+}
 
+/*replace the footage with a static image on mobile.
+for mobile it will be landingpage-img
+ */
+/*@media (max-width: 767px) {
+    #videoBG {
+        display: none;
+    }
+    body {
+        background: url('landingpage-img.png');
+        background-size: cover;
+    }
+}*/
 
+.land-pg-media{
+    display: flex;
+    position:fixed;
+    bottom: 0;
+    margin: 3rem;
+    z-index: 3;
+    justify-content: center; /* container-level adjustment - horizontal */
+    align-items: center; /* container-level adjustment - vertical */
+    flex-direction: column;
+    /*border: 2pt dotted green;*/
+}
+
+.land-icon{
+    z-index:3;
+    opacity: 0.8;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+
+    transition: 0.3s;
+    opacity: 0.6;
+    cursor: pointer;
+    /*border: 2pt dotted blue;*/
+}
+
+.land-icon:hover{
+    opacity:1;
+}
 
 
 
@@ -222,8 +290,6 @@ img[src*="landingpage-img"]{
             opacity: 0.6;
             cursor: pointer;
 
-
-
             /*border: 2pt dotted blue;*/
         }
 
@@ -235,6 +301,7 @@ img[src*="landingpage-img"]{
 /*____media icon____*/
 .social-media-wrapper{
     margin-right: 4rem;
+    /*border: 2pt dotted blue;*/
 }
 
 .icon{
@@ -478,7 +545,6 @@ above the video(childB), but aligned left*/
     background-size: cover; 
     background-position-x: center;
     background-position-y: top;
-    box-shadow: 0 0 5em -1em #A4A4A4;
     transition: all, var(--transition-time);
     position: relative;  /*here goes position.. pay attention how this interacts with the other elements*/
     overflow: hidden;

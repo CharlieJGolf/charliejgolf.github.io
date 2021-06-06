@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="landingpage" lang="en">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,11 +11,31 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Advent+Pro">
         <title>Mamiko Usuda</title>
     </head>
+
 <body class="landingpage">
 
-    <nav class="container"> 
-        <img src="./landingpage-img.png" alt="Mamiko's cover photo" style="width:100%"/>
-        <a href="./homepage.html" class="land-to-home">Mamiko Usuda</a>
-    </nav>
+    <header class="land-pg-nav">
+        <a href="./homepage.html" class="txt-to-home">MAMIKO USUDA</a>
+    </header>
+
+    <section class="land-pg-media">
+        <a target="_blank" href="https://www.instagram.com/mamikousuda/">
+          <img src="instagram.svg" alt="instagram icon" class="ig land-icon"></a>
+  
+        <a target="_blank" href="https://www.facebook.com/mamikonchu">
+          <img src="facebook.svg" alt="facebook icon" class="fb land-icon"></a>
+  
+        <a target="_blank" href="https://www.twitter.com">
+          <img src="twitter.svg" alt="twitter icon"class="twit land-icon"></a>
+  
+        <a target="_blank" href="https://www.wix.com/">
+          <img src="external-link.svg" alt="wix icon" class="wix land-icon"></a>
+    </section>
+
+    <video id="video-bg" playsinline autoplay loop muted poster="./landingpage-img.png">
+        <source src="memoryoflove-short.mp4" type="video/mp4">
+        <source src="memoryoflove-short.webm" type="video/webm">
+    </video>
+
 </body>
 </html>
