@@ -1,5 +1,3 @@
-
-
 /* ----------  Core ---------- */
 
 :root {
@@ -18,7 +16,6 @@
 
 
 /*_________<body> for landing pages & other for all others__________*/
-
 
 
 .allbutlandingpage{
@@ -276,6 +273,10 @@ for mobile it will be landingpage-img
 
 /*_______________ the re-useable header _____________*/
 
+.total-container{
+    height: auto%;
+    width: auto;
+}
 
 .header-image {
     background-image: url(./metasandfade.png);
@@ -283,7 +284,7 @@ for mobile it will be landingpage-img
     background-position-y: center;
     background-size: cover;
     overflow: hidden;
-    height: 25rem;
+    height: 15rem;
 
     /*border: 2pt dotted white;*/
 }
