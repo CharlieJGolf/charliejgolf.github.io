@@ -43,17 +43,18 @@
 
 
 .land-pg-nav{
-    display: flex;
-    position:fixed;
-    background-image: url(./round.png);
-    top: 0;
-    margin: 3rem;
-    z-index: 3;
-    /*border: 2pt dotted green;*/
-    justify-content: center; /* container-level adjustment - horizontal */
+    display:flex;
+    position: absolute;
+    justify-content: flex-start; /* container-level adjustment - horizontal */
     align-items: center; /* container-level adjustment - vertical */
     flex-direction: column;
-    border-radius: .3rem;
+    width: max-content;
+    padding: 0.5rem;
+    background-image: url(./round.png);
+    top: 0;
+    margin: 1rem;
+    z-index: 3;
+    /*border: 2pt dotted green;*/
     box-shadow: 0rem 0rem .3rem .05rem #51666B;
 }
 
@@ -62,7 +63,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 1rem;
+    padding: 0rem;
     color: #333E3C;
     letter-spacing: 1.2rem;
     font-family: "Advent Pro", Verdana, Helvetica, Arial, sans-serif;
@@ -72,17 +73,18 @@
     text-decoration: none;
     opacity: 0.6;
     cursor: pointer;
-    /*border: 2pt dotted blue;*/
+    border: 2pt dotted cornflowerblue;
 }
 
 .txt-to-home:hover{
     opacity:1;
 }
 
+
 #video-bg{
     width:100%;
     height: auto;
-    position:fixed;
+    position: fixed;
     vertical-align: middle;
     opacity: .7;
     z-index: -1;
@@ -122,35 +124,7 @@ for mobile it will be landingpage-img
     }
 }*/
 
-.land-pg-media{
-    display: flex;
-    position:fixed;
-    bottom: 0;
-    margin: 3rem;
-    z-index: 3;
-    justify-content: center; /* container-level adjustment - horizontal */
-    align-items: center; /* container-level adjustment - vertical */
-    flex-direction: column;
-    /*border: 2pt dotted green;*/
-}
 
-.land-icon{
-    z-index:3;
-    opacity: 0.8;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 1rem;
-
-    transition: 0.3s;
-    opacity: 0.6;
-    cursor: pointer;
-    /*border: 2pt dotted blue;*/
-}
-
-.land-icon:hover{
-    opacity:1;
-}
 
 
 
@@ -276,18 +250,10 @@ for mobile it will be landingpage-img
 
 /*_______________ the re-useable header _____________*/
 
-/*I can revert any of these changes by re-publishing the "updated videos" push */
-/*this is what I had for header image before
-attempt of proportional scale (screen width narrow)*/
-/*.header-image {
-    background-image: url(./metasandfade.png);
-    background-position-x: center;
-    background-position-y: center;
-    background-size: cover;
-    overflow: hidden;
-    height: 25rem;
-    border: 2pt dotted white;
-}*/
+/*If I want to make the height not so high,
+just need to crop image height itself,
+becuase this is behaving perfectly,
+according to original dimensions of image*/
 
 .header-image {
     background: url(./metasandfade.png) no-repeat center center;
@@ -307,75 +273,72 @@ attempt of proportional scale (screen width narrow)*/
     /*border: 2pt dotted blueviolet;*/
 }
 
-
-
-
+/*for this nav banner.. just going to need a media query for width..*/
 .nav-banner-wrapper{
     display: flex;
+    flex-direction: row;
     position:sticky;
     top: 0;
     justify-content: space-between; /* container-level adjustment - horizontal */
-    align-items: center; /* container-level adjustment - vertical */
+    align-items: center; /* was center - container-level adjustment - vertical */
     background-color: #333E3C;
     border-top: .05rem solid whitesmoke;
     z-index: 2;
-    /*border: 2pt dotted green;*/
+    /*border: 2pt dotted salmon;*/
 }
 
-    /*____back icon____*/
-    .back-icon-wrapper{
-        margin-left: 4rem;
-        align-items: center; /* container-level adjustment - vertical */
+    .back-wrap{ /*parent flex*/
+        display: flex;
+        align-items: center; /*verticle*/
+        /*border: 2pt dotted salmon;*/
     }
-        
+
         .back-icon {
             opacity: .6;
-            /*border: 2pt dotted green;*/
+            margin: 1rem;
+            width: 2.5vw;
+            height: 2.5vh;
         }
-
         .back-icon:hover{
             opacity: 1;
         }
 
+
         /*____text, back____*/
         .txt-back-to-home {
-            align-self: center;
-            text-align: center;
             margin: 1rem;
             color: whitesmoke;
             letter-spacing: 1.2rem;
-
             font-family: "Advent Pro", Verdana, Helvetica, Arial, sans-serif;
-            font-size: 1.8rem;  
+            font-size: 1.8vw;  
             font-weight: bolder;
-
             transition: 0.3s;
             text-decoration: none;
             opacity: 0.6;
             cursor: pointer;
-
             /*border: 2pt dotted blue;*/
         }
-
         .txt-back-to-home:hover{
             opacity:1;
         }
 
 
-/*____media icon____*/
-.social-media-wrapper{
-    margin-right: 4rem;
-    /*border: 2pt dotted blue;*/
-}
+    /*____media icon____*/
+    .social-media-wrapper{
+        display: flex;
+        /*border: 2pt dotted hotpink;*/
+    }
 
-.icon{
-    margin: 1rem;
-    opacity: 0.6;
-}
+        .icon{
+            margin: .5rem;
+            width: 2.5vw;
+            height: 2.5vh;
+            opacity: 0.6;
+        }
 
-.icon:hover{
-    opacity:1;
-}
+        .icon:hover{
+            opacity:1;
+        }
 /*____media icon____*/
 
 
