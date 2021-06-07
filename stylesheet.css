@@ -133,7 +133,7 @@ for mobile it will be landingpage-img
 
 .container-sectionA {
     display: flex;
-    height: 75vh;
+    height: 85vh;
 }
   
 .sectionA {
@@ -155,7 +155,7 @@ for mobile it will be landingpage-img
     font-variant: small-caps;
     font-family: "Advent Pro", Verdana, Geneva, Tahoma, sans-serif;
     letter-spacing: .8rem;
-    font-size: 2.5rem;
+    font-size: 2.5vw;
     text-decoration: none;
     opacity: 0.7;
     transition: 0.3s;
@@ -206,7 +206,7 @@ for mobile it will be landingpage-img
 /*bottom part*/
 .container-sectionB {
     display: flex;
-    height: 25vh;
+    height: 15vh;
 }
 
 
@@ -244,7 +244,8 @@ for mobile it will be landingpage-img
 }
 
 #test{
-    background-color: #333E3C;
+    /*background-color: #333E3C;*/
+    background-image: url(./dark-sharp-edges.png);
 }
 
 
