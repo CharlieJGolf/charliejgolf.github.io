@@ -195,11 +195,11 @@ for mobile it will be landingpage-img
     /* &auto=format&fit=crop&w=500&q=60 */
   }
   
-#film-works {
+#dance {
     background-image: url(./mamiko-floral-dancing.png);
 }
   
-#connect {
+#art {
     background-image: url(./mamiko-meta.png);
 }
 
@@ -243,7 +243,7 @@ for mobile it will be landingpage-img
     background-color: rgba(0, 0, 0, 0);
 }
 
-#test{
+#contact{
     /*background-color: #333E3C;*/
     background-image: url(./dark-sharp-edges.png);
 }
