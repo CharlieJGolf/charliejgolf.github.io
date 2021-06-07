@@ -276,17 +276,38 @@ for mobile it will be landingpage-img
 
 /*_______________ the re-useable header _____________*/
 
-
-.header-image {
+/*I can revert any of these changes by re-publishing the "updated videos" push */
+/*this is what I had for header image before
+attempt of proportional scale (screen width narrow)*/
+/*.header-image {
     background-image: url(./metasandfade.png);
     background-position-x: center;
     background-position-y: center;
     background-size: cover;
     overflow: hidden;
     height: 25rem;
+    border: 2pt dotted white;
+}*/
 
-    /*border: 2pt dotted white;*/
+.header-image {
+    background: url(./metasandfade.png) no-repeat center center;
+    width: 100%;
+    background-size: contain;
+    position: relative;
+    padding-bottom: 28%;
+    /*border: 2pt dotted green;*/
 }
+
+.header-image span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    display:block;
+    /*border: 2pt dotted blueviolet;*/
+}
+
+
 
 
 .nav-banner-wrapper{
