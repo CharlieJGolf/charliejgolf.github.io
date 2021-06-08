@@ -165,7 +165,7 @@ for mobile it will be landingpage-img
     color: whitesmoke;
     opacity: 1;
     text-shadow: 0 0 .5rem gray;
-  }
+}
 
 .sectionA .overlay {
     background-color: rgba(0, 0, 0, 0.7);
@@ -186,7 +186,98 @@ for mobile it will be landingpage-img
 .sectionA:hover .overlay {
     background-color: rgba(0, 0, 0, 0);
 }
-  
+
+/*attempt at dropdow..*/
+
+.subpage {
+    z-index: 2;
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu-wrap{
+    z-index: 2;
+    margin: 0;
+	padding-left: 0;
+}
+
+.menu-wrap .main-content {
+    z-index: 2;
+}
+
+.main-content{
+    background: transparent;
+    display: block;
+    float: left;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+  }
+
+.sub-content{
+    z-index: 3;
+	color: #fff;
+    background: lightcoral;
+	display: block;
+	float: left;
+    list-style: none;
+	padding: 1rem;
+	position: relative;
+	text-decoration: none;
+    transition-duration: 0.5s;
+}
+
+.main-content .sub-content .subpage {
+    color: #fff;
+    text-decoration: none;
+}
+
+.main-content .sub-content:hover,
+.main-content .sub-content:focus-within {
+    z-index: 2;
+	background: red;
+	cursor: pointer;
+}
+
+.main-content .sub-content:focus-within .subpage {
+    z-index: 2;
+    outline: none;
+}
+
+
+.menu-wrap .main-content .dropdown {
+    z-index: 3;
+	visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
+	position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+	left: 0;
+    display: none;
+    list-style: none;
+
+}
+
+.menu-wrap .main-content:hover > .dropdown,
+.dropdown .sub-content:focus-within > .dropdown,
+.dropdown .sub-content .dropdown:hover,
+.dropdown .sub-content .dropdown:focus {
+    z-index: 3;
+    visibility: visible;
+    opacity: 1;
+    display: block; /*added this / was 'block'*/
+}
+
+.menu-wrap .main-content .dropdown .subcontent {
+	clear: both;
+    width: 100%;
+}
+
+
+/*my god.. drumroll*/
+
 #bio {
     background-image: url(./mamiko-backwards.png);
     /*object-fit: scale-down;*/
@@ -247,6 +338,9 @@ for mobile it will be landingpage-img
     /*background-color: #333E3C;*/
     background-image: url(./dark-sharp-edges.png);
 }
+
+/* homepage body end*/
+
 
 
 /*_______________ the re-useable header _____________*/

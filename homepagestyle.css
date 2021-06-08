@@ -1,0 +1,216 @@
+
+/* ----------  hompage css ---------- */
+
+* {
+    box-sizing: border-box;
+    font-family: "Advent Pro", Verdana, Helvetica, Arial, sans-serif;
+    font-weight: 300;
+
+    /*border: 2px dotted black;*/
+  }
+
+
+
+/*_________<body>  __________*/
+
+.allbutlandingpage{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /*height: 100vh = 100% of the viewport height. height: 100% = 100% of the parent's element height. The viewport units are relative units, which means that they do not have an objective measurement*/
+    background-image: url(./round.png);
+    /*background: #b29671;
+    background: linear-gradient(0deg, #b29671 0%, #d5d2cb 50%, #b29671 100%);*/
+  }
+
+.container-sectionA {
+    display: flex;
+    height: 85vh;
+}
+  
+.sectionA {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    transition: flex .4s ease;
+    position: relative;
+}
+  
+.pagenav {
+    color: whitesmoke;
+    z-index: 3;
+    font-weight: lighter;
+    font-variant: small-caps;
+    font-family: "Advent Pro", Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: .8rem;
+    font-size: 2.5vw;
+    text-decoration: none;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.pagenav:hover {
+    color: whitesmoke;
+    opacity: 1;
+    text-shadow: 0 0 .5rem gray;
+}
+
+
+
+.sectionA .overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: background-color .8s ease;
+}
+  
+.sectionA .content {
+    z-index: 2;
+}
+  
+.sectionA:hover {
+    flex: 2;
+}
+  
+.sectionA:hover .overlay {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.subpage {
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu-wrap{
+    margin: 0;
+	padding-left: 0;
+}
+
+/*.main-content{
+disregard explict styling of 
+main-content for now becuase
+it has it's style from .pagenav
+}*/
+
+.sub-content{
+    z-index: 3;
+	color: #fff;
+    background: lightcoral;
+	display: block;
+	float: left;
+	padding: 1rem;
+	position: relative;
+	text-decoration: none;
+    transition-duration: 0.5s;
+}
+
+.main-content .sub-content .subpage {
+    color: #fff;
+    text-decoration: none;
+}
+
+.main-content .sub-content:hover,
+.main-content .sub-content:focus-within {
+    z-index: 3;
+	background: red;
+	cursor: pointer;
+}
+
+.main-content .sub-content:focus-within .subpage {
+    outline: none;
+}
+
+
+.menu-wrap .main-content .dropdown {
+	visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
+	position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+	left: 0;
+    display: none;
+}
+
+.menu-wrap .main-content:hover > .dropdown,
+.dropdown .sub-content:focus-within > .dropdown,
+.dropdown .sub-content .dropdown:hover,
+.dropdown .sub-content .dropdown:focus {
+    visibility: visible;
+    opacity: 1;
+    display: block
+}
+
+.menu-wrap .main-content .dropdown .subcontent {
+	clear: both;
+    width: 100%;
+}
+
+
+/*my god.. drumroll*/
+
+#bio {
+    background-image: url(./mamiko-backwards.png);
+    /*object-fit: scale-down;*/
+    /* I don't know if this is necesarry or not */
+    /* NOTE: from the template css, I removed this from the image url:  */
+    /* &auto=format&fit=crop&w=500&q=60 */
+  }
+  
+#dance {
+    background-image: url(./mamiko-floral-dancing.png);
+}
+  
+#art {
+    background-image: url(./mamiko-meta.png);
+}
+
+/*bottom part*/
+.container-sectionB {
+    display: flex;
+    height: 15vh;
+}
+
+
+.sectionB {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    transition: flex .4s ease;
+    position: relative;
+}
+
+.sectionB .overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: background-color .8s ease;
+}
+  
+.sectionB .content {
+    z-index: 2;
+}
+  
+.sectionB:hover {
+    flex: 2;
+}
+  
+.sectionB:hover .overlay {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#contact{
+    /*background-color: #333E3C;*/
+    background-image: url(./dark-sharp-edges.png);
+}
