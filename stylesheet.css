@@ -139,8 +139,8 @@ for mobile it will be landingpage-img
 .sectionA {
     flex: 1;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /*horizontal*/
+    align-items: center; /*vertical*/
     height: 100%;
     overflow: hidden;
     background-size: cover;
@@ -150,6 +150,8 @@ for mobile it will be landingpage-img
 }
   
 .pagenav {
+    display: flex;
+    justify-content: center;
     color: whitesmoke;
     font-weight: lighter;
     font-variant: small-caps;
@@ -165,6 +167,7 @@ for mobile it will be landingpage-img
     color: whitesmoke;
     opacity: 1;
     text-shadow: 0 0 .5rem gray;
+    background-color: black;
 }
 
 .sectionA .overlay {
@@ -189,54 +192,31 @@ for mobile it will be landingpage-img
 
 /*attempt at dropdow..*/
 
-.subpage {
-    z-index: 2;
-    text-decoration: none;
-    color: #fff;
-}
 
-.menu-wrap{
-    z-index: 2;
-    margin: 0;
-	padding-left: 0;
-}
-
-.menu-wrap .main-content {
-    z-index: 2;
-}
 
 .main-content{
+    z-index: 2;
     background: transparent;
     display: block;
-    float: left;
+    float: center;
+    text-align: center;
     padding: 1rem;
     position: relative;
-    text-decoration: none;
     transition-duration: 0.5s;
+    text-decoration: none;
+    cursor: pointer;
   }
 
 .sub-content{
-    z-index: 3;
-	color: #fff;
-    background: lightcoral;
-	display: block;
-	float: left;
     list-style: none;
 	padding: 1rem;
 	position: relative;
-	text-decoration: none;
     transition-duration: 0.5s;
 }
 
-.main-content .sub-content .subpage {
-    color: #fff;
-    text-decoration: none;
-}
 
 .main-content .sub-content:hover,
 .main-content .sub-content:focus-within {
-    z-index: 2;
-	background: red;
 	cursor: pointer;
 }
 
@@ -250,13 +230,16 @@ for mobile it will be landingpage-img
     z-index: 3;
 	visibility: hidden;
     opacity: 0;
-    min-width: 5rem;
 	position: absolute;
     transition: all 0.5s ease;
     margin-top: 1rem;
 	left: 0;
     display: none;
     list-style: none;
+    list-style-image: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 
 }
 
@@ -267,7 +250,8 @@ for mobile it will be landingpage-img
     z-index: 3;
     visibility: visible;
     opacity: 1;
-    display: block; /*added this / was 'block'*/
+    display: flex; /*added this / was 'block'*/
+    flex-direction: column;
 }
 
 .menu-wrap .main-content .dropdown .subcontent {
