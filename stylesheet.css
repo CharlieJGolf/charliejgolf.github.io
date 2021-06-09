@@ -162,7 +162,12 @@ for mobile it will be landingpage-img
     display: flex;
     justify-content: center;
     text-align: center;
+    align-content: center;
+    width: fit-content;
     color: whitesmoke;
+    padding-left: .2rem;
+    padding-bottom: .1rem;
+    border-radius: .1rem;
     font-weight: bold;
     font-variant: small-caps;
     font-family: "Advent Pro", Verdana, Geneva, Tahoma, sans-serif;
@@ -179,6 +184,8 @@ for mobile it will be landingpage-img
     color: black;
     opacity: 1;
     text-shadow: 0 0 .5rem gray;
+    justify-content: center;
+    width: fit-content;
 }
 
 .sectionA .overlay {
