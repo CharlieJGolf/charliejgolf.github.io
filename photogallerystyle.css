@@ -18,6 +18,12 @@ margin: 2rem;
 display: none;
 }
 
+.img-itself{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
 .horz-center-slides{
   text-align: center;
 }
