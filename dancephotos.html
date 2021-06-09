@@ -41,132 +41,110 @@
 
 <script src="./photogallery.js"></script>
 
-  <!-- META GALLERY -->
+    <!-- META GALLERY -->
 
-  <!-- Container for the image gallery -->
-<div class="container">
-
-  <!-- Full-width images with number text -->
-  <!-- updating to auto width and need to horizontal center in css -->
-  <div class="metaSlides mySlides">
-    <div class="numbertext">1 / 5</div>
-      <img src="dancegalleryimages\bw-takeflight.png" style="width:auto">
-  </div>
-
-  <div class="metaSlides mySlides">
-    <div class="numbertext">2 / 5</div>
-      <img src="dancegalleryimages\meta-full-control.png" style="width:35%">
-  </div>
-
-  <div class="metaSlides mySlides">
-    <div class="numbertext">3 / 5</div>
-      <img src="dancegalleryimages\meta-listen.png" style="width:auto">
-  </div>
-
-  <div class="metaSlides mySlides">
-    <div class="numbertext">4 / 5</div>
-      <img src="dancegalleryimages\meta-shot.png" style="width:auto">
-  </div>
-
-  <div class="metaSlides mySlides">
-    <div class="numbertext">5 / 5</div>
-      <img src="dancegalleryimages\so-sad.png" style="width:auto">
-  </div>
-
-
-  <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-  <!-- Image text -->
-  <div class="caption-container">
-    <p id="caption"></p>
-  </div>
-
-  <!-- Thumbnail images -->
-  <div class="row">
-    <div class="column">
-      <img class="demo cursor" src="dancegalleryimages\bw-takeflight.png" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="dancegalleryimages\meta-full-control.png" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="dancegalleryimages\meta-listen.png" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="dancegalleryimages\meta-shot.png" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="dancegalleryimages\so-sad.png" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
-    </div>
-  </div>
-</div>
-
-
- <!-- OTHER GALLERY -->
-
-  <!-- Container for the image gallery -->
+    <!-- Container for the image gallery -->
   <div class="container">
 
     <!-- Full-width images with number text -->
     <!-- updating to auto width and need to horizontal center in css -->
-    <div class="mixSlides mySlides">
-      <div class="numbertext">1 / 5</div>
+    <div class="horz-center-slides">
+      <div class="danceSlides">
+        <div class="numbertext">1 / 10</div>
+        <img src="dancegalleryimages\bw-takeflight.png" style="width:auto">
+      </div>
+
+      <div class="danceSlides">
+        <div class="numbertext">2 / 10</div>
+        <img src="dancegalleryimages\meta-full-control.png" style="width:35%">
+      </div>
+
+      <div class="danceSlides">
+        <div class="numbertext">3 / 10</div>
+        <img src="dancegalleryimages\meta-listen.png" style="width:auto">
+      </div>
+
+      <div class="danceSlides">
+        <div class="numbertext">4 / 10</div>
+        <img src="dancegalleryimages\meta-shot.png" style="width:auto">
+      </div>
+
+      <div class="danceSlides">
+        <div class="numbertext">5 / 10</div>
+        <img src="dancegalleryimages\so-sad.png" style="width:auto">
+      </div>
+
+      <div  class="danceSlides">
+        <div class="numbertext">6 / 10</div>
         <img src="dancegalleryimages\backpose.png" style="width:auto">
-    </div>
-  
-    <div class="mixSlides mySlides">
-      <div class="numbertext">2 / 5</div>
+      </div>
+
+      <div class="danceSlides">
+        <div class="numbertext">7 / 10</div>
         <img src="dancegalleryimages\bw-toe-up.png" style="width:auto">
-    </div>
-  
-    <div class="mixSlides mySlides">
-      <div class="numbertext">3 / 5</div>
+      </div>
+
+      <div class="danceSlides">
+        <div class="numbertext">8 / 10</div>
         <img src="dancegalleryimages\orangepuppet.png" style="width:auto">
-    </div>
-  
-    <div class="mixSlides mySlides">
-      <div class="numbertext">4 / 5</div>
+      </div>
+
+      <div class="danceSlides">
+        <div class="numbertext">9 / 10</div>
         <img src="dancegalleryimages\suitjacket.png" style="width:auto">
-    </div>
-  
-    <div class="mixSlides mySlides">
-      <div class="numbertext">5 / 5</div>
+      </div>
+
+      <div class="danceSlides">
+        <div class="numbertext">10 / 10</div>
         <img src="dancegalleryimages\symphony-smoke.png" style="width:auto">
+      </div>
     </div>
-  
-  
     <!-- Next and previous buttons -->
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  
+
     <!-- Image text -->
     <div class="caption-container">
       <p id="caption"></p>
     </div>
-  
+
     <!-- Thumbnail images -->
-    <div class="row">
-      <div class="column">
-        <img class="demo cursor" src="dancegalleryimages\backpose.png" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+      <div class="row">
+        <div class="column">
+          <img class="preview cursor" src="dancegalleryimages\bw-takeflight.png" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+        </div>
+        <div class="column">
+          <img class="preview cursor" src="dancegalleryimages\backpose.png" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+        </div>
+        <div class="column">
+          <img class="preview cursor" src="dancegalleryimages\meta-listen.png" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+        </div>
+        <div class="column">
+          <img class="preview cursor" src="dancegalleryimages\meta-shot.png" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+        </div>
+        <div class="column">
+          <img class="preview cursor" src="dancegalleryimages\so-sad.png" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+        </div>
       </div>
-      <div class="column">
-        <img class="demo cursor" src="dancegalleryimages\bw-toe-up.png" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+
+      <div class="row">
+        <div class="column">
+          <img class="preview cursor" src="dancegalleryimages\meta-full-control.png" style="width:100%" onclick="currentSlide(6)" alt="The Woods">
+        </div>
+        <div class="column">
+          <img class="preview cursor" src="dancegalleryimages\bw-toe-up.png" style="width:100%" onclick="currentSlide(7)" alt="Cinque Terre">
+        </div>
+        <div class="column">
+          <img class="preview cursor" src="dancegalleryimages\symphony-smoke.png" style="width:100%" onclick="currentSlide(8)" alt="Mountains and fjords">
+        </div>
+        <div class="column">
+          <img class="preview cursor" src="dancegalleryimages\suitjacket.png" style="width:100%" onclick="currentSlide(9)" alt="Northern Lights">
+        </div>
+        <div class="column">
+          <img class="preview cursor" src="dancegalleryimages\orangepuppet.png" style="width:100%" onclick="currentSlide(10)" alt="Nature and sunrise">
+        </div>
       </div>
-      <div class="column">
-        <img class="demo cursor" src="dancegalleryimages\orangepuppet.png" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-      </div>
-      <div class="column">
-        <img class="demo cursor" src="dancegalleryimages\suitjacket.png" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-      </div>
-      <div class="column">
-        <img class="demo cursor" src="dancegalleryimages\symphony-smoke.png" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
-      </div>
-    </div>
   </div>
-
-
 
 </body>
 </html>

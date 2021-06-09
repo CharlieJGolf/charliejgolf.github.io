@@ -6,17 +6,22 @@
 box-sizing: border-box;
 }
 
-/* Position the image container
-(needed to position the left and right arrows) */
+/* Position the image container (needed to position the left and right arrows) */
 .container {
 position: relative;
 margin: 2rem;
 }
 
 /* Hide the images by default */
-.mySlides {
+
+.danceSlides {
 display: none;
 }
+
+.horz-center-slides{
+  text-align: center;
+}
+
 
 /* Add a pointer when hovering over the thumbnail images */
 .cursor {
@@ -24,14 +29,15 @@ cursor: pointer;
 }
 
 /* Next & previous buttons */
+
 .prev,
-.next {
+.next{
 cursor: pointer;
 position: absolute;
-top: 40%;
+top: 10%;
 width: auto;
 padding: 16px;
-margin-top: -50px;
+/*margin-top: -50px;*/
 color: #BD9050;
 font-weight: bold;
 font-size: 20px;
@@ -48,11 +54,11 @@ border-radius: 3px 0 0 3px;
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
-.next:hover {
+.next:hover { 
 background-color: #333E3C;
 }
 
-/* Number text (1/3 etc) */
+/* Number text (ex: 1/5)  */
 .numbertext {
 color: #f2f2f2;
 font-size: 12px;
@@ -62,11 +68,16 @@ top: 0;
 }
 
 /* Container for image text */
-.caption-container {
+.caption-container { /*shouldn't need unique elements*/
 text-align: center;
 background-color: #222;
-padding: 2px 16px;
+padding: .5rem 6rem;
 color: white;
+}
+
+.row{
+  height: 50%;
+  border: 2pt dotted lightblue;
 }
 
 .row:after {
@@ -75,18 +86,19 @@ display: table;
 clear: both;
 }
 
-/* Six columns side by side */
+/* five columns side by side */
 .column {
 float: left;
 width: 20%;
+border: 2pt dotted lightcoral;
 }
 
 /* Add a transparency effect for thumnbail images */
-.demo {
+.preview {
 opacity: 0.6;
 }
 
 .active,
-.demo:hover {
+.preview:hover {
 opacity: 1;
 }
