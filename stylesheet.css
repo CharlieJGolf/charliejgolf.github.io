@@ -4,16 +4,25 @@
 
 :root {
     --transition-time: .8s;
-  }
+}
   
   
-  * {
+* {
     box-sizing: border-box;
     font-family: "Open Sans", Verdana, Helvetica, Arial, sans-serif;
     font-weight: 300;
+}
 
-    /*border: 2px dotted white;*/
-  }
+/*
+* { outline: 2px dotted red }
+* * { outline: 2px dotted green }
+* * * { outline: 2px dotted orange }
+* * * * { outline: 2px dotted blue }
+* * * * * { outline: 1px solid red }
+* * * * * * { outline: 1px solid green }
+* * * * * * * { outline: 1px solid orange }
+* * * * * * * * { outline: 1px solid blue }
+*/
 
 
 
@@ -170,7 +179,6 @@ for mobile it will be landingpage-img
     color: black;
     opacity: 1;
     text-shadow: 0 0 .5rem gray;
-    border: 2px dotted lightblue;
 }
 
 .sectionA .overlay {
@@ -212,7 +220,6 @@ for mobile it will be landingpage-img
     transition-duration: 0.5s;
     text-decoration: none;
     cursor: context-menu;
-    border: 2px dotted lightcoral;
 }
 
 .sub-content{
@@ -222,7 +229,6 @@ for mobile it will be landingpage-img
 	padding: 1rem;
 	position: relative;
     transition-duration: 0.5s;
-    border: 2px dotted lightgoldenrodyellow;
 }
 
 
@@ -252,7 +258,6 @@ for mobile it will be landingpage-img
     list-style-type: none;
     margin: 0;
     padding: 0;
-    border: 2px dotted lightgreen;
 }
 
 .menu-wrap .main-content:hover > .dropdown,
@@ -271,7 +276,6 @@ for mobile it will be landingpage-img
 	clear: both;
     width: 100%;
     letter-spacing: none;
-    border: 2px dotted yellow;
 }
 
 
@@ -283,7 +287,7 @@ for mobile it will be landingpage-img
     /* I don't know if this is necesarry or not */
     /* NOTE: from the template css, I removed this from the image url:  */
     /* &auto=format&fit=crop&w=500&q=60 */
-  }
+}
   
 #dance {
     background-image: url(./dancepose.png);
@@ -408,7 +412,7 @@ according to original dimensions of image*/
             color: whitesmoke;
             letter-spacing: 1.2rem;
             font-family: "Advent Pro", Verdana, Helvetica, Arial, sans-serif;
-            font-size: 1.8vw;  
+            font-size: 2vw;  
             font-weight: bolder;
             transition: 0.3s;
             text-decoration: none;
@@ -448,6 +452,15 @@ according to original dimensions of image*/
     color: #333E3C;
     font-family: "Advent Pro", Verdana, Helvetica, Arial, sans-serif;
     }
+
+.dancePhotos-titleWrap{
+/*this is only so I could add the next/prev
+buttons to the top of the dance photo pg*/
+   width: fit-content;
+   font-family: inherit;
+   font-size: inherit;
+   font-weight: inherit;
+}
 
 
 /*____media icon____*/

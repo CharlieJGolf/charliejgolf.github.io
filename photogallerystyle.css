@@ -6,26 +6,37 @@
 box-sizing: border-box;
 }
 
+/*
+* { outline: 2px dotted red }
+* * { outline: 2px dotted green }
+* * * { outline: 2px dotted orange }
+* * * * { outline: 2px dotted blue }
+* * * * * { outline: 1px solid red }
+* * * * * * { outline: 1px solid green }
+* * * * * * * { outline: 1px solid orange }
+* * * * * * * * { outline: 1px solid blue }
+*/
+
 /* Position the image container (needed to position the left and right arrows) */
 .container {
 position: relative;
 margin: 2rem;
 }
 
-/* Hide the images by default */
+/*this horizontally centers each selected image*/
+.horz-center-slides{
+    text-align: center;
+  }
 
+/* Hide the images by default */
 .danceSlides {
-display: none;
+    display: none;
 }
 
 .img-itself{
-    width: auto;
+    width: 40vw;
     max-width: 100%;
     height: auto;
-}
-
-.horz-center-slides{
-  text-align: center;
 }
 
 
@@ -36,26 +47,30 @@ cursor: pointer;
 
 /* Next & previous buttons */
 
-.prev,
-.next{
-cursor: pointer;
-position: absolute;
-top: 10%;
-width: auto;
-padding: 16px;
-/*margin-top: -50px;*/
-color: #BD9050;
-font-weight: bold;
-font-size: 20px;
-border-radius: 0 3px 3px 0;
-user-select: none;
--webkit-user-select: none;
+.prev, .next {
+    /*display: inline;*/
+    vertical-align: middle;
+    cursor: pointer;
+    position: relative;
+    bottom: 0;
+    /*width: auto;*/
+    padding: .5rem;
+    /*margin-top: -50px;*/
+    color: #BD9050;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: .4rem 0 0 .4rem;
+    user-select: none;
+    -webkit-user-select: none;
+    /*going to need to swap these for svg's,
+    in order to be able to set responsive
+    width, using vw*/
 }
 
 /* Position the "next button" to the right */
 .next {
 right: 0;
-border-radius: 3px 0 0 3px;
+border-radius: 0 .4rem .4rem 0;
 }
 
 /* On hover, add a black background color with a little bit see-through */
@@ -64,26 +79,11 @@ border-radius: 3px 0 0 3px;
 background-color: #333E3C;
 }
 
-/* Number text (ex: 1/5)  */
-.numbertext {
-color: #f2f2f2;
-font-size: 12px;
-padding: 8px 12px;
-position: absolute;
-top: 0;
-}
-
-/* Container for image text */
-.caption-container { /*shouldn't need unique elements*/
-text-align: center;
-background-color: #222;
-padding: .5rem 6rem;
-color: white;
-}
 
 .row{
   height: 50%;
-  border: 2pt dotted lightblue;
+  background-color:whitesmoke;
+  box-shadow: 1rem;
 }
 
 .row:after {
@@ -96,15 +96,17 @@ clear: both;
 .column {
 float: left;
 width: 20%;
-border: 2pt dotted lightcoral;
 }
 
 /* Add a transparency effect for thumnbail images */
 .preview {
-opacity: 0.6;
+opacity: 0.5;
+
+/*padding-top: 50%; this does vertically center
+but it pushes both rows up, into the main image
+transform: translateY(-50%);*/
 }
 
-.active,
-.preview:hover {
-opacity: 1;
+.active, .preview:hover {
+opacity: .8;
 }
