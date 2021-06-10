@@ -139,7 +139,6 @@ for mobile it will be landingpage-img
 
 /* -------------- homepage body  ------------ */
 
-
 .container-sectionA {
     display: flex;
     height: 85vh;
@@ -215,7 +214,12 @@ for mobile it will be landingpage-img
 /* _______dropdown_______*/
 
 
-.main-content{
+.menu-wrap{
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown{
 /*this is subject container. it is holding the text element*/
     z-index: 2;
     background: transparent;
@@ -238,18 +242,18 @@ for mobile it will be landingpage-img
 }
 
 
-.main-content .sub-content:hover,
-.main-content .sub-content:focus-within {
+.dropdown .sub-content:hover,
+.dropdown .sub-content:focus-within {
 	cursor: pointer;
 }
 
-.main-content .sub-content:focus-within .subpage {
+.sub-content:focus-within .subpage {
     z-index: 2;
     outline: none;
 }
 
 
-.menu-wrap .main-content .dropdown {
+.menu-wrap .dropdown {
 /*this is wrapping both dropdown options together*/
     position: relative;
     z-index: 3;
@@ -266,7 +270,9 @@ for mobile it will be landingpage-img
     padding: 0;
 }
 
-.menu-wrap .main-content:hover > .dropdown,
+/*when you hover over menu wrap, the dropdown element becomes
+visible. */
+.menu-wrap:hover > .dropdown,
 .dropdown .sub-content:focus-within > .dropdown,
 .dropdown .sub-content .dropdown:hover,
 .dropdown .sub-content .dropdown:focus {
@@ -275,9 +281,18 @@ for mobile it will be landingpage-img
     opacity: 1;
     display: flex; /*added this / was 'block'*/
     flex-direction: column;
+    /*border: 2px dotted red;*/
+    background-color: rgba(0, 0, 0, 0.5);
+    
 }
 
-.menu-wrap .main-content .dropdown .subcontent {
+/*when you hover over menu-wrap, the "subject title" aka pagenav
+gets a darker background for better vis*/
+.menu-wrap:hover> .pagenav{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.menu-wrap .dropdown .subcontent {
 /*this is wrapping the dropdown text indivdually*/
 	clear: both;
     width: 100%;
