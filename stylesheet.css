@@ -30,14 +30,14 @@
 
 
 
-.allbutlandingpage{
+.allbutlandingpage {
     margin: 0;
     padding: 0;
     min-height: 100vh; /*height: 100vh = 100% of the viewport height. height: 100% = 100% of the parent's element height. The viewport units are relative units, which means that they do not have an objective measurement*/
     background-image: url(./round.png);
     /*background: #b29671;
     background: linear-gradient(0deg, #b29671 0%, #d5d2cb 50%, #b29671 100%);*/
-  }
+}
 
 
 
@@ -351,8 +351,8 @@ for mobile it will be landingpage-img
     /*background-color: #333E3C;*/
     background-image: url(./dark-sharp-edges.png);
 }
-
 /* homepage body end*/
+
 
 
 
@@ -468,8 +468,7 @@ buttons to the top of the dance photo pg*/
    font-weight: inherit;
 }
 
-
-/*____media icon____*/
+/*____media icon end____*/
 
 
 
@@ -538,13 +537,6 @@ I just need to add these two things to
     align-items:center; /*vertical centering of main body container*/
     
     /*border: 2pt dotted blue;*/
-}
-
-.film-page-title{
-    font-size: 5rem;
-    color: #333E3C;
-    font-family: "Advent Pro", Verdana, Helvetica, Arial, sans-serif;
-    /*border: 2pt dotted green;*/
 }
 
 .video-wrapper {
@@ -656,10 +648,10 @@ above the video(childB), but aligned left*/
     /*border: 2px dotted red;*/
 }
 
-.card-grid-space .title {
+.card-grid-space .connect-title {
     display: flex;
     flex-wrap: wrap;
-    font-size: 5rem;
+    font-size: 5vw;
     font-family: "Advent Pro", Verdana, Helvetica, Arial, sans-serif;
     margin-top: 2rem;
     margin-right: 1rem;
@@ -855,6 +847,5 @@ above the video(childB), but aligned left*/
 
 >>  http://www.lastdaysofivory.com/ <<
 >>  https://biglife.org/donate/     <<
-
 
 */
