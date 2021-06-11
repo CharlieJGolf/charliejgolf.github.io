@@ -13,7 +13,7 @@
     font-weight: 300;
 }
 
-/*
+
 * { outline: 2px dotted red }
 * * { outline: 2px dotted green }
 * * * { outline: 2px dotted orange }
@@ -22,7 +22,7 @@
 * * * * * * { outline: 1px solid green }
 * * * * * * * { outline: 1px solid orange }
 * * * * * * * * { outline: 1px solid blue }
-*/
+
 
 
 
@@ -69,9 +69,12 @@
 
 /*____text, fwd____*/
 .txt-to-home {
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    /*the below 3 "have no effect on this
+    element since it’s neither a flex
+    container nor a grid container"
+    1. align-items: center;
+    2. justify-content: center;
+    3. flex-direction: column;*/
     padding: 0rem;
     color: #333E3C;
     letter-spacing: 1.2rem;
@@ -173,7 +176,6 @@ for mobile it will be landingpage-img
     letter-spacing: 0.5rem;
     font-size: 3vw;
     text-decoration: none;
-    opacity: 0.7;
     transition: 0.3s;
 }
 
