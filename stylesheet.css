@@ -235,9 +235,7 @@ for mobile it will be landingpage-img
 }
 
 .sub-content{
-/*this doesn't seem to wrap anything*/
     list-style: none;
-    justify-content: center;
 	padding: 1rem;
 	position: relative;
     transition-duration: 0.5s;
