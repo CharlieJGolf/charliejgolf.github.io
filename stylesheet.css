@@ -160,7 +160,7 @@ for mobile it will be landingpage-img
     position: relative;
 }
   
-.subject, .subject-noPgLink .subpage {
+.subject, .subjectNoPgLink, .subpage {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -177,7 +177,7 @@ for mobile it will be landingpage-img
     font-size: 3vw;
     text-decoration: none;
     transition: 0.3s;
-    z-index: 1;
+    z-index: 2;
 }
 
 .subject:hover {
