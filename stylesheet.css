@@ -198,10 +198,10 @@ are hovered over. notice how I excluded menu-wrap h1 aka-
 .subject:hover,
 .subpage:hover{
 /*this is wrapping each text element */
-    background-color: whitesmoke;
-    color: black;
+    background-color: whitesmoke; /*#7f9f8f*/
+    color: #333E3C;
     opacity: 1;
-    text-shadow: 0 0 .5rem gray;
+    text-shadow: none; /*0 0 .1rem gray;*/
     justify-content: center;
     width: fit-content;
 }
@@ -223,8 +223,9 @@ are hovered over. notice how I excluded menu-wrap h1 aka-
 
 .sectionA:hover {
     flex: 2;
+    /*don't think either is necessary:
     background-color: whitesmoke;
-    color: black;
+    color: black;*/
 }
 
 .sectionA:hover .overlay {
@@ -302,8 +303,9 @@ visible. */
     display: flex; /*added this / was 'block'*/
     flex-direction: column;
     /*border: 2px dotted red;*/
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(75, 47, 52, 0.7);
     border-radius: 0.5rem;
+    border: 2px dotted black;
 }
 
 /*when you hover over menu-wrap, result is that,
@@ -392,8 +394,18 @@ the subject of "Dance/Art" the background isn't clear, it's white
 }
 
 #contact{
-    /*background-color: #333E3C;*/
-    background-image: url(./dark-sharp-edges.png);
+    background: rgb(51,62,60);
+    background: radial-gradient(circle, rgba(51,62,60,1) 0%, rgba(75,47,52,1) 25%, rgba(53,54,61,1) 50%, rgba(54,50,61,1) 75%, rgba(51,62,60,1) 100%);
+    
+/*  #333E3C (my dark green)
+    #36323D (muted purple)
+    #4b2f34 (muted red)
+    #BD9050 (my dark gold/brown)
+    #3E1100 (deep pale red)
+
+
+
+ */   
 }
 /* homepage body end*/
 
