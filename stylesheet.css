@@ -13,7 +13,7 @@
     font-weight: 300;
 }
 
-
+/*
 * { outline: 2px dotted red }
 * * { outline: 2px dotted green }
 * * * { outline: 2px dotted orange }
@@ -22,7 +22,7 @@
 * * * * * * { outline: 1px solid green }
 * * * * * * * { outline: 1px solid orange }
 * * * * * * * * { outline: 1px solid blue }
-
+*/
 
 
 
@@ -160,7 +160,9 @@ for mobile it will be landingpage-img
     position: relative;
 }
 
-/* adding menu-wrap before h1 and before
+/* 
+https://css-tricks.com/child-and-sibling-selectors/
+adding menu-wrap before h1 and before
 subpage, is saying, select this child of
 menu-wrap, regardless of how nested the 
 child is. where, 'this child' is the
@@ -301,18 +303,20 @@ visible. */
     flex-direction: column;
     /*border: 2px dotted red;*/
     background-color: rgba(0, 0, 0, 0.5);
-    
+    border-radius: 1.5rem;
 }
 
 /*when you hover over menu-wrap, result is that,
 the "subject title" aka subject gets a
 darker background for better vis
-..but only for dance/art since it's menu-wrap, not "sectionA"*/
-/*.menu-wrap:hover> .subject{
+..but only for dance/art since it's menu-wrap, not "sectionA"
+
+.menu-wrap:hover> .subject{
     background-color: rgba(0, 0, 0, 0.5);
+}
 removing this so that when cursor hovers over
 the subject of "Dance/Art" the background isn't clear, it's white
-}*/
+*/
 .menu-wrap:hover > .subpage{
     background-color: rgba(0, 0, 0, 0.5);
 }
