@@ -303,7 +303,7 @@ visible. */
     flex-direction: column;
     /*border: 2px dotted red;*/
     background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 1.5rem;
+    border-radius: 0.5rem;
 }
 
 /*when you hover over menu-wrap, result is that,
