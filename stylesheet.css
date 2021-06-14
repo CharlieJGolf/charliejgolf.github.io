@@ -385,6 +385,7 @@ the subject of "Dance/Art" the background isn't clear, it's white
 .sectionB:hover {
     /*background-color: whitesmoke;
     color: black;*/
+    border-top: .2vh solid whitesmoke;
 }
   
 .sectionB:hover .overlay {
