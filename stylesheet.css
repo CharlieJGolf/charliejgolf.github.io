@@ -159,8 +159,18 @@ for mobile it will be landingpage-img
     transition: flex .4s ease;
     position: relative;
 }
-  
-.subject, .subjectNoPgLink, .subpage {
+
+/* adding menu-wrap before h1 and before
+subpage, is saying, select this child of
+menu-wrap, regardless of how nested the 
+child is. where, 'this child' is the
+class/element added next, after menu-wrap
+-------
+so, this is just my standard styling,
+before hovering over any of the text itself */
+.subject,
+.menu-wrap h1,
+.menu-wrap .subpage {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -180,7 +190,11 @@ for mobile it will be landingpage-img
     z-index: 2;
 }
 
-.subject:hover {
+/*now, here's the styling when these two element's/classes
+are hovered over. notice how I excluded menu-wrap h1 aka-
+.subjectNoPgLink  ..don't want users thinking it clickable*/
+.subject:hover,
+.subpage:hover{
 /*this is wrapping each text element */
     background-color: whitesmoke;
     color: black;
@@ -190,24 +204,7 @@ for mobile it will be landingpage-img
     width: fit-content;
 }
 
-.subpage:hover{
-    background-color: whitesmoke;
-    color: black;
-    opacity: 1;
-    text-shadow: 0 0 .5rem gray;
-    justify-content: center;
-    width: fit-content;
-}
 
-
-
-/*
-so the overlay is covering the text, 'dance' and 'art'
-but it's not covering 'bio' or 'contact'
-
-bio/contact & dance/art, is the 'subject' element
-but the subject class is also added to he subpage element's class
-*/
 
 .sectionA .overlay {
     background-color: rgba(0, 0, 0, 0.7);
