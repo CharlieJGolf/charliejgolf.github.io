@@ -160,7 +160,7 @@ for mobile it will be landingpage-img
     position: relative;
 }
   
-.pagenav {
+.subject, .subpage {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -177,9 +177,10 @@ for mobile it will be landingpage-img
     font-size: 3vw;
     text-decoration: none;
     transition: 0.3s;
+    z-index: 1;
 }
 
-.pagenav:hover {
+.subject:hover {
 /*this is wrapping each text element */
     background-color: whitesmoke;
     color: black;
@@ -189,6 +190,25 @@ for mobile it will be landingpage-img
     width: fit-content;
 }
 
+.subpage:hover{
+    background-color: whitesmoke;
+    color: black;
+    opacity: 1;
+    text-shadow: 0 0 .5rem gray;
+    justify-content: center;
+    width: fit-content;
+}
+
+
+
+/*
+so the overlay is covering the text, 'dance' and 'art'
+but it's not covering 'bio' or 'contact'
+
+bio/contact & dance/art, is the 'subject' element
+but the subject class is also added to he subpage element's class
+*/
+
 .sectionA .overlay {
     background-color: rgba(0, 0, 0, 0.7);
     width: 100%;
@@ -196,17 +216,18 @@ for mobile it will be landingpage-img
     position: absolute;
     transition: background-color .8s ease;
 }
-  
+
+
 .sectionA .content {
     z-index: 2;
 }
-  
+
 .sectionA:hover {
     flex: 2;
     background-color: whitesmoke;
     color: black;
 }
-  
+
 .sectionA:hover .overlay {
     background-color: rgba(0, 0, 0, 0);
 }
@@ -286,13 +307,17 @@ visible. */
     
 }
 
-/*when you hover over menu-wrap, the "subject title" aka pagenav
-gets a darker background for better vis*/
-.menu-wrap:hover> .pagenav{
+/*when you hover over menu-wrap, result is that,
+the "subject title" aka subject gets a
+darker background for better vis*/
+.menu-wrap:hover> .subject{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.menu-wrap:hover > .subpage{
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.menu-wrap .dropdown .subcontent {
+.menu-wrap .dropdown .sub-content {
 /*this is wrapping the dropdown text indivdually*/
 	clear: both;
     width: 100%;
