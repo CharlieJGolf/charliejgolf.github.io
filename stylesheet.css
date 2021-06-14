@@ -160,7 +160,7 @@ for mobile it will be landingpage-img
     position: relative;
 }
   
-.subject, .subpage {
+.subject, .subject-noPgLink .subpage {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -313,6 +313,8 @@ darker background for better vis
 ..but only for dance/art since it's menu-wrap, not "sectionA"*/
 /*.menu-wrap:hover> .subject{
     background-color: rgba(0, 0, 0, 0.5);
+removing this so that when cursor hovers over
+the subject of "Dance/Art" the background isn't clear, it's white
 }*/
 .menu-wrap:hover > .subpage{
     background-color: rgba(0, 0, 0, 0.5);
