@@ -309,10 +309,11 @@ visible. */
 
 /*when you hover over menu-wrap, result is that,
 the "subject title" aka subject gets a
-darker background for better vis*/
-.menu-wrap:hover> .subject{
+darker background for better vis
+..but only for dance/art since it's menu-wrap, not "sectionA"*/
+/*.menu-wrap:hover> .subject{
     background-color: rgba(0, 0, 0, 0.5);
-}
+}*/
 .menu-wrap:hover > .subpage{
     background-color: rgba(0, 0, 0, 0.5);
 }
