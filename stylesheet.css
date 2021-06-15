@@ -192,6 +192,12 @@ before hovering over any of the text itself */
     z-index: 2;
 }
 
+/*adding this, even though this same element/class is also added right
+above, with  3vw font size specificed. 2vw trumps 3vw and only need this for subpage*/
+.menu-wrap .subpage {
+    font-size: 2vw;
+}
+
 /*now, here's the styling when these two element's/classes
 are hovered over. notice how I excluded menu-wrap h1 aka-
 .subjectNoPgLink  ..don't want users thinking it clickable*/
@@ -261,6 +267,7 @@ are hovered over. notice how I excluded menu-wrap h1 aka-
 	padding: .2rem;
 	position: relative;
     transition-duration: 0.5s;
+
 }
 
 
@@ -304,7 +311,9 @@ visible. */
     opacity: 1;
     flex-direction: column;
     background-color: rgba(75, 47, 52, 0.7);
-    border-radius: 1rem;
+    padding-right: 3em; /*keeping these 3 at em becuase em is relative to the size of the cards font size*/
+    padding-left: 3em;
+    border-radius: 1em;
     /*border: 2px dotted black;*/
 }
 
