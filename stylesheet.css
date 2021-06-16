@@ -213,7 +213,6 @@ are hovered over. notice how I excluded menu-wrap h1 aka-
 }
 
 
-
 .sectionA .overlay {
     background-color: rgba(0, 0, 0, 0.7);
     width: 100%;
@@ -508,6 +507,7 @@ according to original dimensions of image*/
         .icon:hover{
             opacity:1;
         }
+/*____media icons end____*/
 
 
 .satellite-page-title{
@@ -528,8 +528,6 @@ buttons to the top of the dance photo pg*/
    font-size: inherit;
    font-weight: inherit;
 }
-
-/*____media icon end____*/
 
 
 
@@ -607,7 +605,13 @@ above the video(childB), but aligned left*/
     flex-direction: column; /*default is row, that's why row isn't defined for my other flex settings*/
     justify-content: center; /*horizontal centering of main body container*/
     align-items:center; /*vertical centering of main body container*/
-    padding: 1rem;
+    
+    /*the first 2 vids are 1080 and 2nd two are 960
+    so this below padding pulls the large ones 
+    down a little, to be closer in size to the 960s
+    18 seems to be magic number*/
+    padding-left: 18vw;
+    padding-right: 18vw;
     height: auto;
 
     /*border: 2pt dotted green;*/
@@ -615,13 +619,13 @@ above the video(childB), but aligned left*/
 
 .video-title{
     align-self: flex-start; /*left align of the video's title*/
-    font-size: 1.5rem;
+    font-size: 2vw;
     color: #333E3C;
 
     /*border: 2pt dotted orange;*/
 }
 
-.video-itself{  
+.video-itself{
     width: 100% !important;
     height: auto !important;
     box-shadow:
@@ -629,6 +633,13 @@ above the video(childB), but aligned left*/
     /*border: 2pt dotted red;*/
 }
 
+.video-caption{
+    align-self: flex-start; /*left align of the video's title*/
+    font-size: 1.5vw;
+    color: #333E3C;
+
+    /*border: 2pt dotted cornflowerblue;*/
+}
 
 
 
@@ -694,6 +705,24 @@ above the video(childB), but aligned left*/
     justify-content: center;
     align-items: center;
     margin: 3rem;
+}
+
+.tweaklinks{
+    text-decoration: none;
+}
+.tweaklinks:hover{
+    text-decoration: none;
+    color:yellow;
+    text-shadow: #98433E;
+}
+
+.tweaklinks:focus {
+    text-decoration: none; color:orange;
+}
+
+.tweaklinks:active {
+    text-decoration: none;
+    color:teal; }
 }
 
   
