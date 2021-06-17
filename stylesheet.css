@@ -196,7 +196,7 @@ with 3vw font size specificed. 2vw trumps 3vw and I only need this for subpage*/
 .menu-wrap .subpage {
     font-size: 2vw;
     /*this is so the dropdown text has shadow*/
-    text-shadow: 0rem 0rem 3px #1b1b1b;
+    text-shadow: 0rem 0rem 5px #1b1b1b;
 }
 
 
