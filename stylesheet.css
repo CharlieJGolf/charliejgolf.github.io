@@ -179,22 +179,24 @@ before hovering over any of the text itself */
     align-content: center;
     width: fit-content;
     color: whitesmoke;
-    padding-left: .2rem;
-    padding-bottom: .1rem;
-    border-radius: .1rem;
+    padding-left: .4rem;
+    padding-bottom: .4rem;
     font-weight: bold;
     font-variant: small-caps;
     font-family: "Advent Pro", Verdana, Geneva, Tahoma, sans-serif;
     letter-spacing: 0.5rem;
     font-size: 3vw;
     text-decoration: none;
-    transition: 0.3s;
+    transition: 0.2s;
     z-index: 2;
+    /*border: 2px dotted cornflowerblue;*/
 }
 /*adding this, even though this same class is also added right above,
 with 3vw font size specificed. 2vw trumps 3vw and I only need this for subpage*/
 .menu-wrap .subpage {
     font-size: 2vw;
+    /*this is so the dropdown text has shadow*/
+    text-shadow: 0rem 0rem 3px #1b1b1b;
 }
 
 
@@ -203,10 +205,12 @@ note I excluded [.menu-wrap h1] aka .subjectNoPgLink
 don't want users thinking it's clickable*/
 .subject:hover,
 .subpage:hover{
-    /*background-color: #7f9f8f;*/
+    /*background-color:rgba(51, 62, 60, 0.87); #333E3C (same color just .5 transparency)*/
     color: white;
     opacity: 1;
-    text-shadow: 0 0 1rem whitesmoke;
+    border-top: .2rem solid whitesmoke;
+    border-bottom: .2rem solid whitesmoke;
+    border-radius: 4rem;
     justify-content: center;
     width: fit-content;
 }
@@ -228,6 +232,7 @@ text of bio and art lose hover shadow.. hyperlink etc*/
 
 .sectionA:hover {
     flex: 2;
+    text-shadow: 0rem 0rem 3px #1b1b1b;
 }
 
 .sectionA:hover .overlay {
@@ -236,7 +241,7 @@ text of bio and art lose hover shadow.. hyperlink etc*/
 
 
 
-/* _______dropdown_______*/
+/* _______most of dropdown (subpage is also styled above, though)_______*/
 
 
 .menu-wrap{
@@ -271,8 +276,12 @@ I could benefit from reading more about ul's and li's*/
     list-style: none;
 	padding: .2rem;
 	position: relative;
+    padding-right: .4em; /*keeping these 3 at em becuase em is relative to the size of the cards font size*/
+    padding-left: .4em;
+    border-radius: 4em;
     transition-duration: 0.5s;
 }
+
 
 .dropdown .sub-content:hover,
 .dropdown .sub-content:focus-within {
@@ -318,18 +327,17 @@ visible. */
     z-index: 3;
     visibility: visible;
     opacity: 1;
-    background-color: rgba(75, 47, 52, 0.7);
-    padding-right: 3em; /*keeping these 3 at em becuase em is relative to the size of the cards font size*/
-    padding-left: 3em;
-    border-radius: 1em;
-    border: 2px dotted goldenrod;
+    padding-right: .4em; /*keeping these 3 at em becuase em is relative to the size of the cards font size*/
+    padding-left: .4em;
+    border-radius: 4em;
+    /*border: 2px dotted goldenrod;*/
 }
 
 
 .menu-wrap .dropdown .sub-content {
 /*this is wrapping the dropdown text indivdually. it's each li*/
     width: 100%;
-    border: 2px dotted black;
+    /*border: 2px dotted black;*/
 }
 
 
@@ -365,7 +373,7 @@ visible. */
     overflow: hidden;
     background-size: cover;
     background-position: center;
-    transition: flex .4s ease;
+    transition: flex 2s ease;
     position: relative;
     color: black;
 }
@@ -386,6 +394,7 @@ visible. */
     /*background-color: whitesmoke;
     color: black;*/
     border-top: .2vh solid whitesmoke;
+    text-shadow: 0rem 0rem 3px #1b1b1b;
 }
   
 .sectionB:hover .overlay {
