@@ -162,13 +162,13 @@ for mobile it will be landingpage-img
 
 /* 
 https://css-tricks.com/child-and-sibling-selectors/
-adding menu-wrap before h1 and before
-subpage, is saying, select this child of
+prefacing h1 and .subpage with .menu-wrap,
+is saying, select 'this child' of
 menu-wrap, regardless of how nested the 
 child is. where, 'this child' is the
-class/element added next, after menu-wrap
+class/element added after menu-wrap
 -------
-so, this is just my standard styling,
+so, this is just the standard styling,
 before hovering over any of the text itself */
 .subject,
 .menu-wrap h1,
@@ -191,20 +191,19 @@ before hovering over any of the text itself */
     transition: 0.3s;
     z-index: 2;
 }
-
-/*adding this, even though this same element/class is also added right
-above, with  3vw font size specificed. 2vw trumps 3vw and only need this for subpage*/
+/*adding this, even though this same class is also added right above,
+with 3vw font size specificed. 2vw trumps 3vw and I only need this for subpage*/
 .menu-wrap .subpage {
     font-size: 2vw;
 }
 
-/*now, here's the styling when these two element's/classes
-are hovered over. notice how I excluded menu-wrap h1 aka-
-.subjectNoPgLink  ..don't want users thinking it clickable*/
+
+/*here's the styling of when these two element's/classes are hovered over.
+note I excluded [.menu-wrap h1] aka .subjectNoPgLink
+don't want users thinking it's clickable*/
 .subject:hover,
 .subpage:hover{
-/*this is wrapping each text element */
-    /*background-color: whitesmoke; #7f9f8f*/
+    /*background-color: #7f9f8f;*/
     color: white;
     opacity: 1;
     text-shadow: 0 0 1rem whitesmoke;
@@ -221,16 +220,14 @@ are hovered over. notice how I excluded menu-wrap h1 aka-
     transition: background-color .8s ease;
 }
 
-
+/*this is necessary. without it,
+text of bio and art lose hover shadow.. hyperlink etc*/
 .sectionA .content {
     z-index: 2;
 }
 
 .sectionA:hover {
     flex: 2;
-    /*don't think either is necessary:
-    background-color: whitesmoke;
-    color: black;*/
 }
 
 .sectionA:hover .overlay {
@@ -248,9 +245,15 @@ are hovered over. notice how I excluded menu-wrap h1 aka-
     justify-content: center;
 }
 
-.dropdown{
-/*this is subject container. it is holding the text element*/
-    z-index: 2;
+/*I guess I'm removing this .dropdown styling.. it has no effect
+but I already searched about if you can have li elements without
+being contained in a ul. snarky nerds jumped on the dudes question
+in stackoverflow saying, better question is why would you want to
+and that it could break*/
+
+/*.dropdown{
+this is ul, or li wrapper. it's holding the sub-content / anchors
+    /*z-index: 2;
     background: transparent;
     display: flex;
     justify-content: center;
@@ -259,16 +262,17 @@ are hovered over. notice how I excluded menu-wrap h1 aka-
     transition-duration: 0.5s;
     text-decoration: none;
     cursor: context-menu;
-}
+    border: 2px dotted coral
+}*/
 
+/*this is the li
+I could benefit from reading more about ul's and li's*/
 .sub-content{
     list-style: none;
 	padding: .2rem;
 	position: relative;
     transition-duration: 0.5s;
-
 }
-
 
 .dropdown .sub-content:hover,
 .dropdown .sub-content:focus-within {
@@ -282,64 +286,52 @@ are hovered over. notice how I excluded menu-wrap h1 aka-
 
 
 .menu-wrap .dropdown {
-/*this is wrapping both dropdown options together*/
+/*this is keeping the dropdown options hidden
+also, these 'list' properties are defined here but they're really
+having impact on the below style block (since this block is hidden)
+'list' properties are inheritable i.e. children are able to inherit
+the parent's 'list' styling. to be more explicit, I could test moving
+them directly to the li child*/
+    display: none;
+    visibility: hidden;
     position: relative;
     z-index: 3;
     justify-content: center;
-	visibility: hidden;
     opacity: 0;
     transition: all 0.5s ease;
-    margin-top: 1rem;
-    display: none;
     list-style: none;
     list-style-image: none;
     list-style-type: none;
     margin: 0;
     padding: 0;
+    /*border: 2px dotted cornflowerblue;*/
 }
 
-/*when you hover over menu wrap, the dropdown element becomes
+/*when you hover over menu wrap, the dropdown (ul/li) elements become
 visible. */
 .menu-wrap:hover > .dropdown,
 .dropdown .sub-content:focus-within > .dropdown,
 .dropdown .sub-content .dropdown:hover,
 .dropdown .sub-content .dropdown:focus {
-    display: flex; /*added this / was 'block'*/
+    display: flex; /*added this. was block*/
+    flex-direction: column;
     z-index: 3;
     visibility: visible;
     opacity: 1;
-    flex-direction: column;
     background-color: rgba(75, 47, 52, 0.7);
     padding-right: 3em; /*keeping these 3 at em becuase em is relative to the size of the cards font size*/
     padding-left: 3em;
     border-radius: 1em;
-    /*border: 2px dotted black;*/
+    border: 2px dotted goldenrod;
 }
 
-/*when you hover over menu-wrap, result is that,
-the "subject title" aka subject gets a
-darker background for better vis
-..but only for dance/art since it's menu-wrap, not "sectionA"
-
-.menu-wrap:hover> .subject{
-    background-color: rgba(0, 0, 0, 0.5);
-}
-removing this so that when cursor hovers over
-the subject of "Dance/Art" the background isn't clear, it's white
-*/
-.menu-wrap:hover > .subpage{
-    background-color: rgba(0, 0, 0, 0.5);
-}
 
 .menu-wrap .dropdown .sub-content {
-/*this is wrapping the dropdown text indivdually*/
-	clear: both;
+/*this is wrapping the dropdown text indivdually. it's each li*/
     width: 100%;
-    letter-spacing: none;
+    border: 2px dotted black;
 }
 
-
-/*my god.. drumroll*/
 
 #bio {
     background-image: url(./mamiko-backwards.png);
@@ -707,23 +699,17 @@ above the video(childB), but aligned left*/
     margin: 3rem;
 }
 
-.tweaklinks{
-    text-decoration: none;
-}
-.tweaklinks:hover{
-    text-decoration: none;
-    color:yellow;
-    text-shadow: #98433E;
-}
+.grabtext{ /*flex only applies to direct parent so needed to include grab, so the same wrap settings can apply*/
+    display: flex;
+    justify-content: center; /* horizontal align */
+    align-items: center; /* vertical align */
+    text-align: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
 
-.tweaklinks:focus {
-    text-decoration: none; color:orange;
-}
 
-.tweaklinks:active {
-    text-decoration: none;
-    color:teal; }
-}
+
 
   
 .cards-wrapper {
@@ -798,18 +784,20 @@ above the video(childB), but aligned left*/
     /*border: 2px dotted cornflowerblue;*/
 }
 
-.box{ /*form boxes themselves*/
-    margin: .5rem;
-    color: whitesmoke;
-    text-align: right;
-}
 
 .card .box {
+    color: whitesmoke;
     font-size: 0.75em;
     font-family: "Open Sans", Verdana, Helvetica, Arial, sans-serif;
     font-weight: lighter;
-    margin-top: 0.5em;
+    text-align: right;
+    margin: 0.5em;
     line-height: 2em;
+    border: 2px dotted cornflowerblue;
+}
+
+.contact-form .submit-button{
+    cursor: pointer;
 }
   
 .card:before, .card:after {
@@ -845,14 +833,7 @@ above the video(childB), but aligned left*/
     transform: scale(1);
 }
 
-.grabtext{ /*flex only applies to direct parent so needed to include grab, so the same wrap settings can apply*/
-    display: flex;
-    justify-content: center; /* horizontal align */
-    align-items: center; /* vertical align */
-    text-align: center;
-    padding-right: 1rem;
-    padding-left: 1rem;
-  }
+
 
 
 
