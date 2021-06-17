@@ -208,8 +208,8 @@ don't want users thinking it's clickable*/
     /*background-color:rgba(51, 62, 60, 0.87); #333E3C (same color just .5 transparency)*/
     color: white;
     opacity: 1;
-    border-top: .2rem solid whitesmoke;
-    border-bottom: .2rem solid whitesmoke;
+    border-left: .3vh solid whitesmoke;
+    border-right: .3vh solid whitesmoke;
     border-radius: 4rem;
     justify-content: center;
     width: fit-content;
@@ -393,7 +393,7 @@ visible. */
 .sectionB:hover {
     /*background-color: whitesmoke;
     color: black;*/
-    border-top: .2vh solid whitesmoke;
+    border-top: .25vh solid whitesmoke;
     text-shadow: 0rem 0rem 3px #1b1b1b;
 }
   
@@ -715,8 +715,11 @@ above the video(childB), but aligned left*/
     text-align: center;
     padding-right: 1rem;
     padding-left: 1rem;
-  }
+}
 
+.tweaklinks {
+    text-decoration: none;
+}
 
 
 
