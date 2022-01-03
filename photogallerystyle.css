@@ -12,7 +12,7 @@ box-sizing: border-box;
 * * * { outline: 2px dotted orange }
 * * * * { outline: 2px dotted blue }
 * * * * * { outline: 1px solid red }
-* * * * * * { outline: 1px solid green }
+ * * * * * * { outline: 1px solid green }
 * * * * * * * { outline: 1px solid orange }
 * * * * * * * * { outline: 1px solid blue }
 */
@@ -34,7 +34,7 @@ margin: 2rem;
 }
 
 .img-itself{
-    width: 40vw;
+    width: 35vw;
     max-width: 100%;
     height: auto;
     margin-bottom: .2rem;
@@ -45,6 +45,7 @@ margin: 2rem;
 .cursor {
 cursor: pointer;
 }
+
 
 /* Next & previous buttons */
 
@@ -64,8 +65,7 @@ cursor: pointer;
     user-select: none;
     -webkit-user-select: none;
     /*going to need to swap these for svg's,
-    in order to be able to set responsive
-    width, using vw*/
+    to be able to set responsive width, using vw*/
 }
 
 /* Position the "next button" to the right */

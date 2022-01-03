@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv='cache-control' content='no-cache'> 
-    <meta http-equiv='expires' content='0'> 
-    <meta http-equiv='pragma' content='no-cache'>
-    <link href='./stylesheet.css' rel='stylesheet'>
-    <link rel="stylesheet" type="text/css" href="./photogallerystyle.css">
-    <script src="https://unpkg.com/feather-icons"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Advent+Pro">
-    <title>Dance Photography</title>
-    <meta name="description" content="tell everything about this webpage in under 160 characters"/>
-  </head>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv='cache-control' content='no-cache'>
+  <meta http-equiv='expires' content='0'>
+  <meta http-equiv='pragma' content='no-cache'>
+  <link href='./stylesheet.css' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="./photogallerystyle.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Advent+Pro">
+  <title>Dance Photography</title>
+  <meta name="description" content="tell everything about this webpage in under 160 characters" />
+</head>
 
 <body class="allbutlandingpage">
   <section class="header-image">
-      <span></span>
+    <span></span>
+  </section>
+
+  <section class="nav-banner-wrapper">
+    <div class="back-wrap">
+      <a href="./homepage.html"><img src="svg-icons\chevrons-left.svg" alt="chevron back icon" class="back-icon"></a>
+      <a href="./homepage.html" class="txt-back-to-home">MAMIKO USUDA</a>
+    </div>
+    <section class="social-media-wrapper">
+      <a target="_blank" href="https://www.instagram.com/mamikousuda/">
+        <img src="svg-icons\instagram.svg" alt="instagram icon" class="ig icon"></a>
+      <a target="_blank" href="https://www.facebook.com/mamikonchu">
+        <img src="svg-icons\facebook.svg" alt="facebook icon" class="fb icon"></a>
+      <a target="_blank" href="https://www.wix.com/">
+        <img src="svg-icons\external-link.svg" alt="wix icon" class="wix icon"></a>
     </section>
-  
-    <section class="nav-banner-wrapper">
-      <div class="back-wrap"> 
-          <a href="./homepage.html"><img src="svg-icons\chevrons-left.svg" alt="chevron back icon" class="back-icon"></a>
-          <a href="./homepage.html" class="txt-back-to-home">MAMIKO USUDA</a>
-      </div>
-      <section class="social-media-wrapper">
-        <a target="_blank" href="https://www.instagram.com/mamikousuda/">
-          <img src="svg-icons\instagram.svg" alt="instagram icon" class="ig icon"></a>
-        <a target="_blank" href="https://www.facebook.com/mamikonchu">
-          <img src="svg-icons\facebook.svg" alt="facebook icon" class="fb icon"></a>
-        <a target="_blank" href="https://www.wix.com/">
-          <img src="svg-icons\external-link.svg" alt="wix icon" class="wix icon"></a>
-      </section>
-    </section>
+  </section>
 
   <h1 class="satellite-page-title">
     <div class="dancePhotos-titleWrap">
@@ -42,15 +43,13 @@
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
   </h1>
-  
-  
-  
 
-<script src="./photogallery.js"></script>
 
+
+
+  <script src="./photogallery.js"></script>
 
   <div class="container">
-
     <!-- Full-width images with number text -->
     <!-- updating to auto width and need to horizontal center in css -->
     <div class="horz-center-slides">
@@ -58,7 +57,7 @@
         <img src="dancegalleryimages\bw-takeflight.png" class="img-itself">
       </div>
 
-      <div  class="danceSlides">
+      <div class="danceSlides">
         <img src="dancegalleryimages\backpose.png" class="img-itself">
       </div>
 
@@ -102,42 +101,53 @@
     so that they're all same height/width, since they're just
     the thumb/previews -->
 
-      <div class="row">
-        <div class="column">
-          <img class="preview cursor" src="dancegalleryimages\bw-takeflight.png" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
-        </div>
-        <div class="column">
-          <img class="preview cursor" src="dancegalleryimages\backpose.png" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
-        </div>
-        <div class="column">
-          <img class="preview cursor" src="dancegalleryimages\meta-listen.png" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-        </div>
-        <div class="column">
-          <img class="preview cursor" src="dancegalleryimages\meta-shot.png" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-        </div>
-        <div class="column">
-          <img class="preview cursor" src="dancegalleryimages\so-sad.png" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
-        </div>
+    <div class="row">
+      <div class="column">
+        <img class="preview cursor" src="dancegalleryimages\bw-takeflight.png" style="width:100%"
+          onclick="currentSlide(1)" alt="The Woods">
       </div>
+      <div class="column">
+        <img class="preview cursor" src="dancegalleryimages\backpose.png" style="width:100%" onclick="currentSlide(2)"
+          alt="Cinque Terre">
+      </div>
+      <div class="column">
+        <img class="preview cursor" src="dancegalleryimages\meta-listen.png" style="width:100%"
+          onclick="currentSlide(3)" alt="Mountains and fjords">
+      </div>
+      <div class="column">
+        <img class="preview cursor" src="dancegalleryimages\meta-shot.png" style="width:100%" onclick="currentSlide(4)"
+          alt="Northern Lights">
+      </div>
+      <div class="column">
+        <img class="preview cursor" src="dancegalleryimages\so-sad.png" style="width:100%" onclick="currentSlide(5)"
+          alt="Nature and sunrise">
+      </div>
+    </div>
 
-      <div class="row">
-        <div class="column">
-          <img class="preview cursor" src="dancegalleryimages\meta-full-control.png" style="width:100%" onclick="currentSlide(6)" alt="The Woods">
-        </div>
-        <div class="column">
-          <img class="preview cursor" src="dancegalleryimages\bw-toe-up.png" style="width:100%" onclick="currentSlide(7)" alt="Cinque Terre">
-        </div>
-        <div class="column">
-          <img class="preview cursor" src="dancegalleryimages\symphony-smoke.png" style="width:100%" onclick="currentSlide(8)" alt="Mountains and fjords">
-        </div>
-        <div class="column">
-          <img class="preview cursor" src="dancegalleryimages\suitjacket.png" style="width:100%" onclick="currentSlide(9)" alt="Northern Lights">
-        </div>
-        <div class="column">
-          <img class="preview cursor" src="dancegalleryimages\orangepuppet.png" style="width:100%" onclick="currentSlide(10)" alt="Nature and sunrise">
-        </div>
+    <div class="row">
+      <div class="column">
+        <img class="preview cursor" src="dancegalleryimages\meta-full-control.png" style="width:100%"
+          onclick="currentSlide(6)" alt="The Woods">
       </div>
+      <div class="column">
+        <img class="preview cursor" src="dancegalleryimages\bw-toe-up.png" style="width:100%" onclick="currentSlide(7)"
+          alt="Cinque Terre">
+      </div>
+      <div class="column">
+        <img class="preview cursor" src="dancegalleryimages\symphony-smoke.png" style="width:100%"
+          onclick="currentSlide(8)" alt="Mountains and fjords">
+      </div>
+      <div class="column">
+        <img class="preview cursor" src="dancegalleryimages\suitjacket.png" style="width:100%" onclick="currentSlide(9)"
+          alt="Northern Lights">
+      </div>
+      <div class="column">
+        <img class="preview cursor" src="dancegalleryimages\orangepuppet.png" style="width:100%"
+          onclick="currentSlide(10)" alt="Nature and sunrise">
+      </div>
+    </div>
   </div>
 
 </body>
+
 </html>
