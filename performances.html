@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv='cache-control' content='no-cache'> 
+    <meta http-equiv='expires' content='0'> 
+    <meta http-equiv='pragma' content='no-cache'>
+    <link href='./stylesheet.css' rel='stylesheet'>
+    <link href='./modal-lightbox.css' rel='stylesheet'>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script async src="https://kit.fontawesome.com/6cc05e1e8e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Advent+Pro">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <title>Performances</title>
+    <meta name="description" content="tell everything about this webpage in under 160 characters"/>
+</head>
+
+<body class="allbutlandingpage">
+    <section class="header-image">
+      <span></span>
+    </section>
+
+    <section class="nav-banner-wrapper">
+        <div class="back-wrap"> 
+            <a href="./homepage.html"><img src="svg-icons\chevrons-left.svg" alt="chevron back icon" class="back-icon"></a>
+            <a href="./homepage.html" class="txt-back-to-home">MAMIKO USUDA</a>
+        </div>
+        <section class="social-media-wrapper">
+            <a target="_blank" href="https://www.instagram.com/mamikousuda/">
+            <img src="svg-icons\instagram.svg" alt="instagram icon" class="ig icon"></a>
+            <a target="_blank" href="https://www.facebook.com/mamikonchu">
+            <img src="svg-icons\facebook.svg" alt="facebook icon" class="fb icon"></a>
+            <a target="_blank" href="https://www.wix.com/">
+            <img src="svg-icons\external-link.svg" alt="wix icon" class="wix icon"></a>
+        </section>
+    </section>
+
+    <h1 class="satellite-page-title">Performances</h1>
+
+    <script src="./modalgallery.js" async></script>
+
+
+    <h1>Japan Contemporary Dance Company Kawasaki, Japan 2021 | "MISALIGNMENT" "SO CLOSE" Choreographed by Paul Julius</h1>
+
+        <!-- Images used to open the lightbox -->
+    <div class="pics-in-a-row">
+        <div class="pic1">
+            <img src="modalimages\JCDC1.png" onclick="openModal();currentSlide(1)" class="pre-lightbox-img hover-shadow">
+        </div>
+        <div class="pic2">
+            <img src="modalimages\JCDC2.png" onclick="openModal();currentSlide(2)" class="pre-lightbox-img hover-shadow">
+        </div>
+        <div class="pic3">
+            <img src="modalimages\JCDC3.png"onclick="openModal();currentSlide(3)" class="pre-lightbox-img hover-shadow">
+        </div>
+        <div class="pic4">
+            <img src="modalimages\JCDC4.png" onclick="openModal();currentSlide(4)" class="pre-lightbox-img hover-shadow">
+        </div>
+        <div class="pic5">
+            <img src="modalimages\JCDC5.png" onclick="openModal();currentSlide(5)" class="pre-lightbox-img hover-shadow">
+        </div>
+    </div>
+    
+    <!-- The Modal/Lightbox -->
+    <div id="myModal" class="modal">
+
+        <div class="modal-content">
+    
+            <div class="mySlides">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="numbertext">1 / 5</div>
+                <img src="modalimages\JCDC1.png" style="width:100%">
+            </div>
+        
+            <div class="mySlides">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="numbertext">2 / 5</div>
+                <img src="modalimages\JCDC2.png" style="width:100%">
+            </div>
+        
+            <div class="mySlides">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="numbertext">3 / 5</div>
+                <img src="modalimages\JCDC3.png" style="width:100%">
+            </div>
+        
+            <div class="mySlides">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="numbertext">4 / 5</div>
+                <img src="modalimages\JCDC4.png" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="numbertext">5 / 5</div>
+                <img src="modalimages\JCDC5.png" style="width:100%">
+            </div>
+
+    
+            <!-- Next/previous controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+            <!-- Caption text -->
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+        
+            <!-- "Thumbnail image controls"  I don't need this.
+            <div class="column">
+                <img class="demo" src="modalimages\JCDC1.png" onclick="currentSlide(1)" alt="Nature">
+            </div>
+        
+            <div class="column">
+                <img class="demo" src="modalimages\JCDC2.png" onclick="currentSlide(2)" alt="Snow">
+            </div>
+        
+            <div class="column">
+                <img class="demo" src="modalimages\JCDC3.png" onclick="currentSlide(3)" alt="Mountains">
+            </div>
+        
+            <div class="column">
+                <img class="demo" src="modalimages\JCDC4.png" onclick="currentSlide(4)" alt="Lights">
+            </div>
+
+            <div class="column">
+                <img class="demo" src="modalimages\JCDC5.png" onclick="currentSlide(5)" alt="Other">
+            </div>
+             -->
+
+        </div>
+    </div>
+    
+    
+</body>
+</html>
