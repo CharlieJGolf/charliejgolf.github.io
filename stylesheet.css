@@ -208,9 +208,11 @@ don't want users thinking it's clickable*/
     /*background-color:rgba(51, 62, 60, 0.87); #333E3C (same color just .5 transparency)*/
     color: white;
     opacity: 1;
-    border-left: .3vh solid whitesmoke;
-    border-right: .3vh solid whitesmoke;
-    border-radius: 4rem;
+    border-left: .1vw solid whitesmoke;
+    border-right: .1vw solid whitesmoke;
+    /*border-radius: 4rem;*/
+    padding-left: 2rem;
+    padding-right: 2rem;
     justify-content: center;
     width: fit-content;
 }

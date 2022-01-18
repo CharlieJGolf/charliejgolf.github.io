@@ -21,6 +21,7 @@ so it doesn't span entire screen width !!! */
     vertical-align: middle;
     padding: 1rem;
     cursor: pointer;
+    opacity: .75;
 }
 
 .pics-in-a-row{
@@ -44,6 +45,7 @@ so it doesn't span entire screen width !!! */
 .AKpic4 { flex: 1.5019; }
 .AKpic5 { flex: 1.5019; }
 
+
 /* The Modal (background) */
 .modal {
     display: none;
@@ -66,9 +68,10 @@ so it doesn't span entire screen width !!! */
     vertical-align: middle;
     margin: auto;
     padding: 0;
-    width: 90vw;
-    max-width: 30vw;
-    border: red solid 2px;
+    width: 30vw;
+    height: auto;
+    /*max-width: 30vw;*/
+    /*border: red solid 2px;*/
 }
   
 /* The Close Button */
@@ -77,7 +80,7 @@ so it doesn't span entire screen width !!! */
     position: absolute;
     top: 10px;
     right: 25px;
-    font-size: 35px;
+    font-size: 2rem;
     font-weight: bold;
 }
 
@@ -89,7 +92,8 @@ so it doesn't span entire screen width !!! */
 }
   
 /* Hide the slides by default */
-.mySlides {
+.mySlides1,
+.mySlides2 {
     display: none;
 }
   
@@ -104,7 +108,7 @@ so it doesn't span entire screen width !!! */
     margin-top: -50px;
     color: white;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 2rem;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
@@ -123,10 +127,10 @@ so it doesn't span entire screen width !!! */
     background-color: rgba(0, 0, 0, 0.8);
 }
   
-/* Number text (1/3 etc) */
+/* Number text (1/5 etc) */
 .numbertext {
     color: #f2f2f2;
-    font-size: 12px;
+    font-size: 1rem;
     padding: 8px 12px;
     position: absolute;
     top: 0;
