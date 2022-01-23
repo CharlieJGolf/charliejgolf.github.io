@@ -558,8 +558,8 @@ buttons to the top of the dance photo pg*/
 }
 
 .bio-image img {
-    height: 25rem;
-    width: auto;
+    height: auto;
+    width: 100%;
     border-radius: 0rem;
     box-shadow: 0rem 0rem .3rem .01rem #51666B;
 }
@@ -670,30 +670,30 @@ above the video(childB), but aligned left*/
 
 }
   
-    .connect-media-container::after {
-      position: absolute;
-      content: "";
-      top: calc(-1 * var(--border-width));
-      left: calc(-1 * var(--border-width));
-      z-index: -1;
-      width: calc(100% + var(--border-width) * 2);
-      height: calc(100% + var(--border-width) * 2);
-      background: linear-gradient(
-        60deg,
-        #BD9050,
-        #51666B,
-        #B29671,
-        #98433E,
-        #D5D2CB,
-        #818294);
-      background-size: 300% 300%;
-      background-position: 0 50%;
+.connect-media-container::after {
+    position: absolute;
+    content: "";
+    top: calc(-1 * var(--border-width));
+    left: calc(-1 * var(--border-width));
+    z-index: -1;
+    width: calc(100% + var(--border-width) * 2);
+    height: calc(100% + var(--border-width) * 2);
+    background: linear-gradient(
+    60deg,
+    #BD9050,
+    #51666B,
+    #B29671,
+    #98433E,
+    #D5D2CB,
+    #818294);
+    background-size: 300% 300%;
+    background-position: 0 50%;
 
-      border-top-left-radius: calc(2 * var(--border-width));
-      border-bottom-right-radius: calc(2 * var(--border-width));
-      /*border-radius: calc(2 * var(--border-width));*/
-      animation: moveGradient 8s alternate infinite;
-    }
+    border-top-left-radius: calc(2 * var(--border-width));
+    border-bottom-right-radius: calc(2 * var(--border-width));
+    /*border-radius: calc(2 * var(--border-width));*/
+    animation: moveGradient 8s alternate infinite;
+}
 
   @keyframes moveGradient {
     50% {
@@ -724,8 +724,6 @@ above the video(childB), but aligned left*/
 }
 
 
-
-  
 .cards-wrapper {
     display: grid; /*Defines the element as a grid container and establishes a new grid formatting context for its contents - https://css-tricks.com/snippets/css/complete-guide-grid/*/
     justify-content: center; /* horizontal align */
@@ -753,14 +751,14 @@ above the video(childB), but aligned left*/
     /*border: 2px dotted blue;*/
   }
   
-  .card-grid-space{
-      display: flex;
-      flex-direction: column;
-      justify-content: left; /* horizontal align */
-      align-items: center; /* vertical align */
-  
-      /*border: 2px dotted black;*/
-  }
+.card-grid-space{
+    display: flex;
+    flex-direction: column;
+    justify-content: left; /* horizontal align */
+    align-items: center; /* vertical align */
+
+    /*border: 2px dotted black;*/
+}
   
 .card {
     --bg-filter-opacity: 0.15;
@@ -807,7 +805,7 @@ above the video(childB), but aligned left*/
     text-align: right;
     margin: 0.5em;
     line-height: 2em;
-    border: 2px dotted cornflowerblue;
+    /*border: 2px dotted cornflowerblue;*/
 }
 
 .contact-form .submit-button{

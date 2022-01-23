@@ -1,3 +1,7 @@
+//below code was referenced from the w3schools modal sample
+//then, this thread for multiple on one page ..the last response at bottom:
+//https://stackoverflow.com/questions/45687065/multiple-lightbox-modal-image-gallery-on-1-page
+
 function openModal1() {
   document.getElementById("myModal1").style.display = "block";
 }

@@ -12,6 +12,16 @@
 */
 
 
+
+/* this isn't done. the text needs to wrap at a certian point, not just shrink*/
+.show-header{
+    font-weight: lighter;
+    font-size: 1.5vw;
+    margin-left: 10vw;
+    /*border: solid 2pt red;*/
+}
+
+
 /*  !!! try to strink the width of the row by half
 so it doesn't span entire screen width !!! */
 
@@ -24,6 +34,7 @@ so it doesn't span entire screen width !!! */
     opacity: .75;
 }
 
+/* https://codepen.io/sarus/pen/PJGPmy */
 .pics-in-a-row{
     padding: 0;
     margin-right: 10vw;
@@ -33,6 +44,7 @@ so it doesn't span entire screen width !!! */
     align-items: center;
 }
 
+/* https://codepen.io/sarus/pen/PJGPmy */
 .JCDCpic1 { flex: 1.5;}
 .JCDCpic2 { flex: 0.6666; }
 .JCDCpic3 { flex: 1.5; }
